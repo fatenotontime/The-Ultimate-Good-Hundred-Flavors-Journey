@@ -9,6 +9,8 @@ _sim_*.mjs
 _sim_*.cjs
 _check_*.py
 _gen_*.py
+_dl_*.py
+_read_*.py
 _rendered.html
 _edge_err.log
 
