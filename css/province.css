@@ -1,0 +1,333 @@
+/* ============================================================
+   css/province.css — 省份美食列表页样式
+   依据《至善百味行网站设计思路书》2.4 第二层 / 2.5 / 2.6 编写
+   ============================================================ */
+
+/* ---------- 顶部横幅（省名书法字 + 模糊大图背景） ---------- */
+.province-banner {
+  position: relative;
+  height: 340px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--zhuqing);
+}
+
+.province-banner__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(6px) brightness(0.72);
+  transform: scale(1.08);   /* 模糊边缘不露白 */
+}
+
+/* 深色蒙版，保证书法字清晰 */
+.province-banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg,
+    rgba(40, 40, 40, 0.18) 0%,
+    rgba(40, 40, 40, 0.42) 100%);
+}
+
+.province-banner__inner {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 0 24px;
+}
+
+.province-banner__title {
+  font-family: var(--font-title);
+  font-size: clamp(48px, 9vw, 88px);
+  color: #fff;
+  letter-spacing: 14px;
+  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
+  margin-bottom: 10px;
+}
+
+.province-banner__short {
+  display: inline-block;
+  font-family: var(--font-title);
+  font-size: 18px;
+  color: var(--xinghuang);
+  letter-spacing: 6px;
+  border: 1.5px solid rgba(249, 193, 22, 0.6);
+  border-radius: 999px;
+  padding: 3px 18px;
+  margin-bottom: 14px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.province-banner__intro {
+  max-width: 640px;
+  margin: 0 auto;
+  font-size: 15px;
+  line-height: 1.9;
+  color: rgba(255, 255, 255, 0.92);
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* ---------- 内容区 ---------- */
+.province-page {
+  padding: 40px 24px 60px;
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+/* 双栏布局：左食单 + 右社会实践 */
+.province-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+}
+
+.province-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.province-section-title {
+  font-family: var(--font-title);
+  font-size: 26px;
+  color: var(--yanzhi);
+  letter-spacing: 6px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.province-section-title::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(192, 72, 81, 0.35), transparent);
+}
+
+/* ---------- 卡片网格（自适应 2~4 列） ---------- */
+.dish-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.dish-card {
+  background: var(--gaosu);
+  border: 1px solid rgba(104, 176, 171, 0.22);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.3s ease;
+  animation: card-in 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* 列表页入场：卡片扇形依次弹出（设计文档 2.6-列表页入场） */
+@keyframes card-in {
+  from { opacity: 0; transform: translateY(26px) scale(0.94); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.dish-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: var(--shadow-lift);
+}
+
+.dish-card__img {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--yuebai);
+}
+.dish-card__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.dish-card:hover .dish-card__img img {
+  transform: scale(1.07);
+}
+
+.dish-card__body {
+  padding: 16px 18px 18px;
+}
+
+.dish-card__name {
+  font-family: var(--font-title);
+  font-size: 20px;
+  color: var(--ink);
+  letter-spacing: 2px;
+  margin-bottom: 4px;
+}
+
+.dish-card__subtitle {
+  font-size: 13px;
+  color: var(--ink-light);
+  margin-bottom: 10px;
+}
+
+.dish-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.dish-card__tag {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  padding: 2px 10px;
+  border-radius: 999px;
+  background: rgba(249, 193, 22, 0.24);
+  color: #8A6A00;
+  border: 1px solid rgba(249, 193, 22, 0.4);
+  white-space: nowrap;
+}
+
+/* ---------- 「未完待续」空状态（烹饪语气） ---------- */
+.dish-empty {
+  text-align: center;
+  padding: 80px 24px;
+  border: 2px dashed rgba(120, 146, 98, 0.35);
+  border-radius: 16px;
+  background: rgba(245, 240, 235, 0.6);
+}
+
+.dish-empty__icon {
+  font-size: 56px;
+  margin-bottom: 18px;
+  animation: steam 2.6s ease-in-out infinite;
+}
+
+/* 热气升腾动画（设计文档 5.2 搭配成功的蒸汽元素复用） */
+@keyframes steam {
+  0%, 100% { transform: translateY(0) scale(1); opacity: 0.85; }
+  50%      { transform: translateY(-10px) scale(1.08); opacity: 1; }
+}
+
+.dish-empty__title {
+  font-family: var(--font-title);
+  font-size: 30px;
+  color: var(--yanzhi);
+  letter-spacing: 6px;
+  margin-bottom: 14px;
+}
+
+.dish-empty__text {
+  max-width: 520px;
+  margin: 0 auto 10px;
+  font-size: 15px;
+  line-height: 2;
+  color: var(--ink);
+}
+
+.dish-empty__hint {
+  font-size: 13px;
+  color: var(--zhuqing);
+  letter-spacing: 2px;
+}
+
+/* 返回首页按钮 */
+.back-home {
+  display: inline-block;
+  margin-top: 26px;
+  padding: 10px 28px;
+  border-radius: 999px;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  color: #fff;
+  background: var(--zhuqing);
+  letter-spacing: 2px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.back-home:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(120, 146, 98, 0.4);
+  color: #fff;
+}
+
+/* 面包屑（设计文档 2.4 第三层要求，列表页同样保留层级） */
+.breadcrumb {
+  margin-bottom: 22px;
+  font-size: 13px;
+  color: var(--ink-light);
+  letter-spacing: 1px;
+}
+.breadcrumb a { color: var(--tianqing); }
+.breadcrumb a:hover { color: var(--zhuqing); }
+.breadcrumb .sep { margin: 0 8px; color: rgba(60, 60, 60, 0.3); }
+.breadcrumb .current { color: var(--yanzhi); }
+
+/* ---------- 响应式 ---------- */
+@media (max-width: 768px) {
+  .province-banner { height: 260px; }
+  .province-banner__title { font-size: 42px; letter-spacing: 8px; }
+  .province-banner__intro { font-size: 13px; }
+  .province-page { padding: 28px 16px 48px; }
+  .dish-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; }
+  .dish-card__name { font-size: 17px; }
+  /* 小屏：双栏变单栏，入口移到食单下方 */
+  .province-layout { flex-direction: column; gap: 24px; }
+  .practice-entry { width: 100%; }
+  .practice-entry__link { flex-direction: row; justify-content: center; }
+  .practice-entry__text { writing-mode: horizontal-tb; letter-spacing: 4px; }
+}
+
+/* ============================================================
+   右侧社会实践竖排入口
+   ----------------------------------------------------------
+   结构：
+     .practice-entry（右侧竖栏容器）
+       └ .practice-entry__link（竖排入口链接「美味背后的故事」）
+           └ .practice-entry__text（竖排文字）
+   点击 → practice.html?province={id} 社会实践展示页
+   ============================================================ */
+.practice-entry {
+  width: 120px;                 /* 固定宽度竖栏 */
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+/* 竖排入口链接：卷轴/碑帖风格 */
+.practice-entry__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 14px;
+  background: var(--gaosu);
+  border: 1px solid rgba(192, 72, 81, 0.35);
+  border-radius: 12px;
+  box-shadow: var(--shadow-soft);
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.3s ease,
+              background 0.3s ease;
+}
+
+.practice-entry__link:hover {
+  transform: translateX(-4px);
+  box-shadow: var(--shadow-lift);
+  background: #FFF8F0;
+}
+
+/* 竖排文字：「美味背后的故事」从上到下书写 */
+.practice-entry__text {
+  font-family: var(--font-title);
+  font-size: 19px;
+  color: var(--yanzhi);
+  letter-spacing: 6px;
+  writing-mode: vertical-rl;    /* 竖排 */
+  text-orientation: upright;    /* 字直立不倒 */
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+.practice-entry__link:hover .practice-entry__text {
+  color: var(--zhuqing);
+}

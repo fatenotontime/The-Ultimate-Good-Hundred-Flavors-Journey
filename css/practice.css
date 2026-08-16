@@ -1,0 +1,202 @@
+/* ============================================================
+   css/practice.css — 社会实践展示页样式
+   竖排卷轴风格，国风配色（与全站一致）
+   ============================================================ */
+
+/* ---------- 顶部横幅 ---------- */
+.practice-banner {
+  position: relative;
+  height: 320px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(160deg, var(--zhuqing) 0%, #5F7A4C 100%);
+}
+
+/* 水墨晕染装饰（竖排文字背景纹理） */
+.practice-banner::before {
+  content: "烟火人间";
+  position: absolute;
+  right: 6%;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: var(--font-title);
+  font-size: 120px;
+  color: rgba(255, 255, 255, 0.08);
+  writing-mode: vertical-rl;
+  letter-spacing: 18px;
+  pointer-events: none;
+}
+
+.practice-banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg,
+    rgba(40, 40, 40, 0.16) 0%,
+    rgba(40, 40, 40, 0.38) 100%);
+}
+
+.practice-banner__inner {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 0 24px;
+}
+
+.practice-banner__title {
+  font-family: var(--font-title);
+  font-size: clamp(40px, 7vw, 72px);
+  color: #fff;
+  letter-spacing: 12px;
+  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
+  margin-bottom: 10px;
+}
+
+.practice-banner__short {
+  display: inline-block;
+  font-family: var(--font-title);
+  font-size: 16px;
+  color: var(--xinghuang);
+  letter-spacing: 6px;
+  border: 1.5px solid rgba(249, 193, 22, 0.6);
+  border-radius: 999px;
+  padding: 3px 18px;
+  margin-bottom: 14px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.practice-banner__sub {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.92);
+  letter-spacing: 3px;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* ---------- 内容区 ---------- */
+.practice-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 36px 24px 64px;
+}
+
+/* 面包屑 */
+.breadcrumb {
+  margin-bottom: 26px;
+  font-size: 13px;
+  color: var(--ink-light);
+  letter-spacing: 1px;
+}
+.breadcrumb a { color: var(--tianqing); }
+.breadcrumb a:hover { color: var(--zhuqing); }
+.breadcrumb .sep { margin: 0 8px; color: rgba(60, 60, 60, 0.3); }
+.breadcrumb .current { color: var(--yanzhi); }
+
+/* ---------- 简介（竖排引用样式） ---------- */
+.practice-intro {
+  font-family: var(--font-title);
+  font-size: 19px;
+  line-height: 2;
+  color: var(--ink);
+  letter-spacing: 3px;
+  padding: 22px 26px;
+  margin-bottom: 36px;
+  background: var(--gaosu);
+  border-left: 4px solid var(--xinghuang);
+  border-radius: 0 12px 12px 0;
+  box-shadow: var(--shadow-soft);
+}
+
+/* ---------- 图文左右排版 ----------
+   每行：左文字（约 6 成）+ 右图片（约 4 成），
+   逐行向下排列 */
+.practice-flow {
+  margin-bottom: 40px;
+}
+
+/* 一行：左文字 + 右图片 */
+.practice-flow__row {
+  display: flex;
+  align-items: flex-start;      /* 顶部对齐 */
+  gap: 36px;
+  margin-bottom: 44px;
+}
+
+/* 左：文字（1~2 段） */
+.practice-flow__text {
+  flex: 1;
+  min-width: 0;                 /* 允许收缩 */
+  padding-top: 6px;
+}
+
+.practice-flow__text p {
+  font-size: 15.5px;
+  line-height: 2.2;
+  color: var(--ink);
+  margin-bottom: 14px;
+  letter-spacing: 1px;
+}
+.practice-flow__text p:last-child {
+  margin-bottom: 0;
+}
+
+/* 右：图片（约 4 成宽） */
+.practice-flow__figure {
+  flex-shrink: 0;
+  width: 38%;
+  margin: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--gaosu);
+  border: 1px solid rgba(104, 176, 171, 0.2);
+  box-shadow: var(--shadow-soft);
+}
+
+.practice-flow__figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.practice-flow__figure:hover img {
+  transform: scale(1.03);
+}
+
+.practice-flow__caption {
+  font-family: var(--font-title);
+  font-size: 13px;
+  letter-spacing: 4px;
+  text-align: center;
+  color: var(--yanzhi);
+  padding: 10px 14px;
+  border-top: 1px dashed rgba(104, 176, 171, 0.3);
+}
+
+/* ---------- 返回按钮 ---------- */
+.practice-back {
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* ---------- 响应式 ---------- */
+@media (max-width: 768px) {
+  .practice-banner { height: 240px; }
+  .practice-banner__title { font-size: 40px; letter-spacing: 8px; }
+  .practice-banner::before { font-size: 80px; }
+  .practice-page { padding: 24px 16px 48px; }
+  .practice-intro { font-size: 16px; padding: 18px 20px; }
+  /* 窄屏：左右排版变上下（文字在上，图片在下） */
+  .practice-flow__row {
+    flex-direction: column;
+    gap: 18px;
+    margin-bottom: 32px;
+  }
+  .practice-flow__figure {
+    width: 100%;              /* 图片占满整行 */
+    max-width: 420px;
+    margin: 0 auto;
+  }
+}

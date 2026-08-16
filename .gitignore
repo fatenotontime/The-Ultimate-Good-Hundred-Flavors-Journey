@@ -1,0 +1,25 @@
+# 临时文件
+*.log
+_server.log
+_server_err.log
+
+# 测试/临时脚本
+_test_*.py
+_sim_*.mjs
+_sim_*.cjs
+_check_*.py
+_gen_*.py
+_rendered.html
+_edge_err.log
+
+# 浏览器配置文件
+_edge_profile/
+
+# 系统文件
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# IDE
+.vscode/
+.idea/

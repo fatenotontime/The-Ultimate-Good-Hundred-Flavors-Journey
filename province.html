@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>省份美食 · 至善百味行</title>
+  <meta name="description" content="至善百味行省份美食陈列页，指尖漫游各省餐桌风味。">
+
+  <!-- 字体：2.3 字体方案 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@400;500;700&family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+
+  <!-- 全站样式 -->
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/province.css">
+
+  <!-- GSAP 核心库（2.6 动效设计） -->
+  <script src="assets/vendor/gsap.min.js" defer></script>
+</head>
+<body>
+
+  <!-- 2.5 顶部导航栏（与首页一致） -->
+  <nav class="site-nav" id="site-nav">
+    <a class="nav-logo" href="index.html">
+      <span class="logo-seal">至</span>
+      <span>至善百味行</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">首页</a></li>
+      <li><a href="game.html">至善小当家</a></li>
+      <li><a href="about.html">关于</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <!-- 省份横幅（省名书法字 + 模糊美食大图背景） -->
+    <section class="province-banner" id="province-banner">
+      <div class="province-banner__inner">
+        <span class="province-banner__short">…</span>
+        <h1 class="province-banner__title">加载中</h1>
+      </div>
+    </section>
+
+    <!-- 内容区：食单 + 社会实践（右侧竖向） -->
+    <section class="province-page">
+      <nav class="breadcrumb" aria-label="面包屑">
+        <a href="index.html">首页</a>
+        <span class="sep">›</span>
+        <span class="current">…</span>
+      </nav>
+
+      <div class="province-layout">
+        <!-- 左：风味食单 -->
+        <div class="province-main">
+          <h2 class="province-section-title">风味食单</h2>
+          <div class="dish-grid" id="dish-grid">
+            <p class="dish-empty__hint" style="text-align:center;padding:40px 0;color:var(--zhuqing);">正在备菜…</p>
+          </div>
+        </div>
+
+        <!-- 右：社会实践竖排入口「美味背后的故事」（href 由 province.js 按省份更新） -->
+        <aside class="practice-entry" id="practice-entry">
+          <a class="practice-entry__link" href="practice.html">
+            <span class="practice-entry__text">美味背后的故事</span>
+          </a>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <!-- 2.5 页脚 -->
+  <footer class="site-footer">
+    <div class="footer-brand">至善百味行</div>
+    <p>以互动版图漫游三十四个省级行政区的饮食文化 · 本项目为静态网站，数据驱动呈现</p>
+    <p>© 2025 至善百味行 · 版权所有</p>
+  </footer>
+
+  <!-- 页面脚本 -->
+  <script src="js/utils.js" defer></script>
+  <script src="js/cursor.js" defer></script>
+  <script src="js/province.js" defer></script>
+</body>
+</html>

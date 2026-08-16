@@ -1,0 +1,34 @@
+{
+  "recipes": [
+    {
+      "id": "diguoji",
+      "name": "地锅鸡配锅贴",
+      "subtitle": "一锅两吃，饼借菜味",
+      "utensil": "wok",
+      "utensilName": "铁锅",
+      "ingredients": ["鸡肉", "面粉", "葱"],
+      "thumbnail": "assets/images/provinces/anhui/diguoji-thumb.webp",
+      "link": "detail.html?province=anhui&dish=diguoji"
+    },
+    {
+      "id": "jianjiao-baodan",
+      "name": "煎饺抱蛋",
+      "subtitle": "金黄蛋衣，酥脆煎饺",
+      "utensil": "steamer",
+      "utensilName": "蒸屉",
+      "ingredients": ["面粉", "猪肉", "鸡蛋"],
+      "thumbnail": "assets/images/provinces/anhui/jianjiao-baodan-thumb.webp",
+      "link": "detail.html?province=anhui&dish=jianjiao-baodan"
+    },
+    {
+      "id": "danhuatang",
+      "name": "蛋花汤",
+      "subtitle": "一撮葱花，一勺清汤",
+      "utensil": "claypot",
+      "utensilName": "砂锅",
+      "ingredients": ["鸡蛋", "葱", "红枣"],
+      "thumbnail": "assets/images/provinces/anhui/danhuatang-thumb.webp",
+      "link": "detail.html?province=anhui&dish=danhuatang"
+    }
+  ]
+}

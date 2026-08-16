@@ -1,0 +1,229 @@
+/* ============================================================
+   css/detail.css — 美食详情页完整样式
+   依据《至善百味行网站设计思路书》2.4 第三层 / 2.5 / 2.6 编写
+   ============================================================ */
+
+.detail-page {
+  padding: 88px 24px 60px;
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+/* ---------- 面包屑 ---------- */
+.detail-breadcrumb {
+  margin-bottom: 28px;
+}
+
+/* ---------- 主内容：左侧大图 + 右侧文字 ---------- */
+.detail-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 52px;
+  align-items: start;
+}
+
+/* ---------- 左侧：大图轮播 ---------- */
+.detail-carousel {
+  position: sticky;
+  top: 90px;
+}
+
+.carousel__main {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--yuebai);
+  box-shadow: var(--shadow-lift);
+}
+
+.carousel__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.55s ease;
+}
+.carousel__img.is-active { opacity: 1; }
+
+/* 轮播箭头 */
+.carousel__btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(245, 240, 235, 0.88);
+  border: 1px solid rgba(120, 146, 98, 0.28);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: var(--zhuqing);
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  z-index: 2;
+  user-select: none;
+}
+.carousel__btn:hover { background: #fff; transform: translateY(-50%) scale(1.1); }
+.carousel__btn--prev { left: 14px; }
+.carousel__btn--next { right: 14px; }
+
+/* 轮播指示点 */
+.carousel__dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 14px;
+}
+.carousel__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(120, 146, 98, 0.28);
+  cursor: pointer;
+  transition: background 0.25s, transform 0.25s;
+}
+.carousel__dot.is-active {
+  background: var(--zhuqing);
+  transform: scale(1.3);
+}
+
+/* ---------- 右侧：文字内容 ---------- */
+.detail-content {}
+
+.detail-content__name {
+  font-family: var(--font-title);
+  font-size: clamp(32px, 5vw, 48px);
+  color: var(--yanzhi);
+  letter-spacing: 6px;
+  margin-bottom: 10px;
+}
+
+.detail-content__subtitle {
+  font-size: 15px;
+  color: var(--ink-light);
+  letter-spacing: 2px;
+  margin-bottom: 18px;
+}
+
+/* 产地 + 标签行 */
+.detail-content__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.detail-content__origin {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  padding: 4px 14px;
+  border-radius: 999px;
+  background: rgba(104, 176, 171, 0.14);
+  color: var(--tianqing);
+  border: 1px solid rgba(104, 176, 171, 0.3);
+}
+
+.detail-content__tag {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  padding: 3px 12px;
+  border-radius: 999px;
+  background: rgba(249, 193, 22, 0.2);
+  color: #8A6A00;
+  border: 1px solid rgba(249, 193, 22, 0.4);
+}
+
+/* 分隔装饰线 */
+.detail-content__divider {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--yanzhi), transparent);
+  margin-bottom: 20px;
+}
+
+/* 详细介绍（历史典故 + 风味描写） */
+.detail-content__desc {
+  font-size: 15px;
+  line-height: 2.2;
+  color: var(--ink);
+  margin-bottom: 26px;
+}
+
+/* 主要食材 */
+.detail-content__ingredients {
+  margin-bottom: 28px;
+}
+.detail-content__ingredients-label {
+  font-family: var(--font-title);
+  font-size: 18px;
+  color: var(--zhuqing);
+  letter-spacing: 4px;
+  margin-bottom: 12px;
+}
+.detail-content__ingredient-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.detail-content__ingredient {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  padding: 5px 14px;
+  border-radius: 8px;
+  background: var(--gaosu);
+  border: 1px solid rgba(120, 146, 98, 0.25);
+  color: var(--ink);
+}
+
+/* 返回按钮 */
+.detail-content__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 28px;
+  border-radius: 999px;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  color: #fff;
+  background: var(--zhuqing);
+  letter-spacing: 2px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.detail-content__back:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(120, 146, 98, 0.4);
+  color: #fff;
+}
+
+/* ---------- 响应式：移动端改为上下布局 ---------- */
+@media (max-width: 860px) {
+  .detail-main {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .detail-carousel { position: static; }
+  .detail-page { padding: 76px 16px 48px; }
+}
+
+/* ---------- 空状态（菜品不存在）---------- */
+.detail-empty {
+  text-align: center;
+  padding: 80px 24px;
+  border: 2px dashed rgba(120, 146, 98, 0.35);
+  border-radius: 16px;
+  background: rgba(245, 240, 235, 0.6);
+}
+.detail-empty__icon { font-size: 52px; margin-bottom: 16px; animation: dp-float 2.8s ease-in-out infinite; }
+.detail-empty__title { font-family: var(--font-title); font-size: 28px; color: var(--yanzhi); letter-spacing: 5px; margin-bottom: 12px; }
+.detail-empty__text { font-size: 15px; color: var(--ink); line-height: 2.1; max-width: 480px; margin: 0 auto 24px; }
+
+@keyframes dp-float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50%      { transform: translateY(-10px) rotate(3deg); }
+}

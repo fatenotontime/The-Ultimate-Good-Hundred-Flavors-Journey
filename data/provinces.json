@@ -1,0 +1,344 @@
+{
+  "provinces": [
+    {
+      "id": "beijing",
+      "name": "北京",
+      "shortName": "京",
+      "fill": "#C98B6F",
+      "hover": "#B8714F",
+      "tasteTags": ["咸鲜", "宫廷", "京味"],
+      "description": "烤鸭皮酥肉嫩，炸酱面酱香浓郁，京味小吃讲究一勺一镬的功夫。",
+      "dishCount": 12
+    },
+    {
+      "id": "tianjin",
+      "name": "天津",
+      "shortName": "津",
+      "fill": "#C9A86F",
+      "hover": "#B8904F",
+      "tasteTags": ["咸鲜", "小吃", "津味"],
+      "description": "狗不理包子皮薄馅足，煎饼果子一套在手，十八街麻花香酥甜脆。",
+      "dishCount": 8
+    },
+    {
+      "id": "hebei",
+      "name": "河北",
+      "shortName": "冀",
+      "fill": "#A8C98F",
+      "hover": "#8FB86F",
+      "tasteTags": ["咸鲜", "面食", "朴实"],
+      "description": "驴肉火烧外酥里嫩，缸炉烧饼层层起酥，太行山下的家常味道。",
+      "dishCount": 8
+    },
+    {
+      "id": "shanxi",
+      "name": "山西",
+      "shortName": "晋",
+      "fill": "#D6C8A0",
+      "hover": "#C2AF82",
+      "tasteTags": ["酸香", "面食", "粗犷"],
+      "description": "刀削面筋道爽滑，老陈醋酸香醇厚，面食千变万化不离一口醋。",
+      "dishCount": 10
+    },
+    {
+      "id": "neimenggu",
+      "name": "内蒙古",
+      "shortName": "蒙",
+      "fill": "#8FC9C2",
+      "hover": "#6FB5AE",
+      "tasteTags": ["鲜香", "奶食", "草原"],
+      "description": "手把肉原汁原味，奶茶咸香暖心，烤全羊是草原上的待客之礼。",
+      "dishCount": 9
+    },
+    {
+      "id": "liaoning",
+      "name": "辽宁",
+      "shortName": "辽",
+      "fill": "#C98FA8",
+      "hover": "#B86F90",
+      "tasteTags": ["咸鲜", "炖菜", "豪爽"],
+      "description": "锅包肉外脆里嫩，猪肉炖粉条热气腾腾，东北大地上的一口实在。",
+      "dishCount": 9
+    },
+    {
+      "id": "jilin",
+      "name": "吉林",
+      "shortName": "吉",
+      "fill": "#A8A0C9",
+      "hover": "#8F82B8",
+      "tasteTags": ["咸鲜", "炖菜", "长白山"],
+      "description": "人参鸡汤温补滋养，朝鲜族冷面酸甜开胃，山珍河鲜尽在一锅。",
+      "dishCount": 8
+    },
+    {
+      "id": "heilongjiang",
+      "name": "黑龙江",
+      "shortName": "黑",
+      "fill": "#6F9FC9",
+      "hover": "#4F82B8",
+      "tasteTags": ["咸鲜", "炖菜", "冰雪"],
+      "description": "锅包肉酸甜酥脆，小鸡炖蘑菇鲜香四溢，冰雪之城自有滚烫美味。",
+      "dishCount": 9
+    },
+    {
+      "id": "shanghai",
+      "name": "上海",
+      "shortName": "沪",
+      "fill": "#C96F8F",
+      "hover": "#B84F73",
+      "tasteTags": ["甜鲜", "本帮", "精致"],
+      "description": "生煎馒头底脆汁浓，红烧肉浓油赤酱，本帮菜的甜里带着鲜。",
+      "dishCount": 11
+    },
+    {
+      "id": "jiangsu",
+      "name": "江苏",
+      "shortName": "苏",
+      "fill": "#8FC9A0",
+      "hover": "#6FB582",
+      "tasteTags": ["清淡", "精细", "淮扬"],
+      "description": "狮子头肥而不腻，大煮干丝刀工如发，淮扬菜讲究和、精、清、新。",
+      "dishCount": 12
+    },
+    {
+      "id": "zhejiang",
+      "name": "浙江",
+      "shortName": "浙",
+      "fill": "#6FC9C2",
+      "hover": "#4FB5AE",
+      "tasteTags": ["清淡", "鲜美", "杭帮"],
+      "description": "西湖醋鱼酸甜适口，东坡肉酥烂入味，杭帮菜清鲜本味见长。",
+      "dishCount": 11
+    },
+    {
+      "id": "anhui",
+      "name": "安徽",
+      "shortName": "皖",
+      "fill": "#C9A08F",
+      "hover": "#B5826F",
+      "tasteTags": ["咸鲜", "火功", "徽州"],
+      "description": "臭鳜鱼闻臭吃香，毛豆腐发酵入味，徽菜重火功讲究原汁原味。",
+      "dishCount": 9
+    },
+    {
+      "id": "fujian",
+      "name": "福建",
+      "shortName": "闽",
+      "fill": "#C9C26F",
+      "hover": "#B5AE4F",
+      "tasteTags": ["鲜甜", "汤品", "闽南"],
+      "description": "佛跳墙坛启荤香四溢，沙茶面汤浓味厚，闽菜以汤为魂以鲜为先。",
+      "dishCount": 10
+    },
+    {
+      "id": "jiangxi",
+      "name": "江西",
+      "shortName": "赣",
+      "fill": "#C96F6F",
+      "hover": "#B84F4F",
+      "tasteTags": ["香辣", "瓦罐", "赣菜"],
+      "description": "瓦罐汤小火慢煨，辣椒炒肉鲜辣下饭，赣菜辣中带鲜别具一格。",
+      "dishCount": 9
+    },
+    {
+      "id": "shandong",
+      "name": "山东",
+      "shortName": "鲁",
+      "fill": "#A0C96F",
+      "hover": "#85B54F",
+      "tasteTags": ["咸鲜", "鲁菜", "大气"],
+      "description": "葱烧海参葱香浓郁，九转大肠五味调和，鲁菜是北方菜系的根基。",
+      "dishCount": 12
+    },
+    {
+      "id": "henan",
+      "name": "河南",
+      "shortName": "豫",
+      "fill": "#D6A86F",
+      "hover": "#C2904F",
+      "tasteTags": ["咸鲜", "面食", "中原"],
+      "description": "烩面汤浓面筋，胡辣汤麻辣鲜香，中原大地一碗面的江湖。",
+      "dishCount": 9
+    },
+    {
+      "id": "hubei",
+      "name": "湖北",
+      "shortName": "鄂",
+      "fill": "#8FA8C9",
+      "hover": "#6F90B8",
+      "tasteTags": ["鲜辣", "蒸菜", "鱼米"],
+      "description": "热干面芝麻酱香浓郁，莲藕排骨汤清甜润燥，千湖之省鱼米飘香。",
+      "dishCount": 10
+    },
+    {
+      "id": "hunan",
+      "name": "湖南",
+      "shortName": "湘",
+      "fill": "#C26F8F",
+      "hover": "#AE4F73",
+      "tasteTags": ["香辣", "湘菜", "浓郁"],
+      "description": "剁椒鱼头鲜辣开胃，辣椒炒肉下饭神器，湘菜无辣不欢越辣越香。",
+      "dishCount": 11
+    },
+    {
+      "id": "guangdong",
+      "name": "广东",
+      "shortName": "粤",
+      "fill": "#6FC98F",
+      "hover": "#4FB573",
+      "tasteTags": ["清淡", "鲜甜", "粤菜"],
+      "description": "白切鸡皮爽肉滑，虾饺晶莹剔透，早茶一盅两件尽显从容。",
+      "dishCount": 13
+    },
+    {
+      "id": "guangxi",
+      "name": "广西",
+      "shortName": "桂",
+      "fill": "#8FC96F",
+      "hover": "#73B54F",
+      "tasteTags": ["酸辣", "米粉", "壮族"],
+      "description": "螺蛳粉酸辣鲜爽，桂林米粉卤香四溢，壮乡风味酸中带辣。",
+      "dishCount": 9
+    },
+    {
+      "id": "hainan",
+      "name": "海南",
+      "shortName": "琼",
+      "fill": "#6FC9C9",
+      "hover": "#4FB5B5",
+      "tasteTags": ["清淡", "海鲜", "热带"],
+      "description": "文昌鸡皮黄肉嫩，清补凉清甜解暑，热带海岛的轻盈滋味。",
+      "dishCount": 8
+    },
+    {
+      "id": "chongqing",
+      "name": "重庆",
+      "shortName": "渝",
+      "fill": "#C96F4F",
+      "hover": "#B84F33",
+      "tasteTags": ["麻辣", "火锅", "江湖"],
+      "description": "九宫格火锅麻辣鲜香，小面红油翻滚，山城人的火辣性格都在锅里。",
+      "dishCount": 10
+    },
+    {
+      "id": "sichuan",
+      "name": "四川",
+      "shortName": "川",
+      "fill": "#C9484F",
+      "hover": "#A82F38",
+      "tasteTags": ["麻辣", "川菜", "百味"],
+      "description": "麻婆豆腐麻辣烫嘴，回锅肉肥而不腻，一菜一格百菜百味。",
+      "dishCount": 13
+    },
+    {
+      "id": "guizhou",
+      "name": "贵州",
+      "shortName": "黔",
+      "fill": "#A86FC9",
+      "hover": "#8F4FB8",
+      "tasteTags": ["酸辣", "苗家", "酸汤"],
+      "description": "酸汤鱼酸辣开胃，肠旺面红油浓香，苗乡的酸是时间酿出的味。",
+      "dishCount": 9
+    },
+    {
+      "id": "yunnan",
+      "name": "云南",
+      "shortName": "滇",
+      "fill": "#C9A06F",
+      "hover": "#B5824F",
+      "tasteTags": ["鲜香", "菌子", "民族"],
+      "description": "过桥米线汤滚鲜香，野生菌火锅山珍荟萃，彩云之南的舌尖盛宴。",
+      "dishCount": 10
+    },
+    {
+      "id": "xizang",
+      "name": "西藏",
+      "shortName": "藏",
+      "fill": "#C98F6F",
+      "hover": "#B8734F",
+      "tasteTags": ["醇香", "藏味", "高原"],
+      "description": "酥油茶咸香暖身，糌粑朴实顶饱，高原之上以牛羊肉与奶为席。",
+      "dishCount": 7
+    },
+    {
+      "id": "shaanxi",
+      "name": "陕西",
+      "shortName": "陕",
+      "fill": "#C2A86F",
+      "hover": "#AE904F",
+      "tasteTags": ["酸辣", "面食", "古都"],
+      "description": "肉夹馍腊汁浓郁，羊肉泡馍汤鲜馍香，十三朝古都的面食传奇。",
+      "dishCount": 11
+    },
+    {
+      "id": "gansu",
+      "name": "甘肃",
+      "shortName": "甘",
+      "fill": "#C9C26F",
+      "hover": "#B5AE4F",
+      "tasteTags": ["咸鲜", "面食", "丝路"],
+      "description": "兰州牛肉面一清二白三红四绿，手抓羊肉肥而不腻，丝路驼铃声里的面香。",
+      "dishCount": 9
+    },
+    {
+      "id": "qinghai",
+      "name": "青海",
+      "shortName": "青",
+      "fill": "#6FA8C9",
+      "hover": "#4F90B8",
+      "tasteTags": ["咸鲜", "牛羊肉", "高原"],
+      "description": "青海老酸奶酸甜醇厚，炕锅羊肉滋滋冒油，高原湖泊边的朴实美味。",
+      "dishCount": 7
+    },
+    {
+      "id": "ningxia",
+      "name": "宁夏",
+      "shortName": "宁",
+      "fill": "#A0A86F",
+      "hover": "#85904F",
+      "tasteTags": ["咸鲜", "羊肉", "塞上"],
+      "description": "手抓滩羊清鲜不膻，羊杂碎汤浓味美，塞上江南的羊肉盛宴。",
+      "dishCount": 8
+    },
+    {
+      "id": "xinjiang",
+      "name": "新疆",
+      "shortName": "新",
+      "fill": "#C9A04F",
+      "hover": "#B58233",
+      "tasteTags": ["孜然", "烤制", "西域"],
+      "description": "烤羊肉串滋滋冒油，大盘鸡鲜辣过瘾，馕与奶茶是西域的日常。",
+      "dishCount": 10
+    },
+    {
+      "id": "taiwan",
+      "name": "台湾",
+      "shortName": "台",
+      "fill": "#C96FC2",
+      "hover": "#B84FAE",
+      "tasteTags": ["清鲜", "夜市", "宝岛"],
+      "description": "蚵仔煎外脆内软，牛肉面汤浓面Q，宝岛夜市汇聚南北小吃。",
+      "dishCount": 9
+    },
+    {
+      "id": "xianggang",
+      "name": "香港",
+      "shortName": "港",
+      "fill": "#6FC9B5",
+      "hover": "#4FB598",
+      "tasteTags": ["鲜甜", "烧腊", "中西"],
+      "description": "烧鹅皮脆肉嫩，云吞面鲜虾弹牙，中西合璧的东方之珠味道。",
+      "dishCount": 8
+    },
+    {
+      "id": "aomen",
+      "name": "澳门",
+      "shortName": "澳",
+      "fill": "#C2C96F",
+      "hover": "#AEB54F",
+      "tasteTags": ["葡式", "点心", "中西"],
+      "description": "葡式蛋挞酥香嫩滑，猪扒包外脆里嫩，中葡交融的小城风味。",
+      "dishCount": 7
+    }
+  ]
+}

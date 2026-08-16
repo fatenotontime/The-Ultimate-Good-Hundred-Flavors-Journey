@@ -1,0 +1,289 @@
+/* ============================================================
+   css/global.css — 全局样式、国风变量、字体引入
+   依据《至善百味行网站设计思路书》2.2 / 2.3 / 2.5 编写
+   ============================================================ */
+
+/* ---------- 2.2 色彩体系（中国传统色谱淡雅色系） ---------- */
+:root {
+  --yuebai:    #D6ECF0;   /* 月白：页面背景辅助色 */
+  --zhuqing:   #789262;   /* 竹青：导航栏、按钮主色 */
+  --xinghuang: #F9C116;   /* 杏黄：高亮提示、标签装饰 */
+  --yanzhi:    #C04851;   /* 胭脂：重点强调、标题点缀 */
+  --tianqing:  #68B0AB;   /* 天青：链接、交互元素 */
+  --gaosu:     #F5F0EB;   /* 缟素：卡片底色、内容区背景 */
+
+  --ink:        #3A3A3A;  /* 正文墨色 */
+  --ink-light:  #6E6E6E;  /* 次级文字 */
+  --shadow-soft: 0 4px 18px rgba(60, 60, 60, 0.12);
+  --shadow-lift: 0 8px 28px rgba(60, 60, 60, 0.22);
+
+  /* 2.3 字体方案 */
+  --font-title:  "站酷仓耳渔阳体", "ZCOOL KuaiLe", "汉仪乐喵体", "Noto Serif SC", "STKaiti", "KaiTi", serif;
+  --font-serif:  "Noto Serif SC", "思源宋体", "Songti SC", "SimSun", serif;
+  --font-sans:   "Noto Sans SC", "思源黑体", "Microsoft YaHei", "PingFang SC", sans-serif;
+  --font-en:     "Times New Roman", "Georgia", serif;
+
+  /* 宣纸纹理叠加（assets/images/decorations/ 下 PNG 半透明平铺） */
+  --texture-paper: url("../assets/images/decorations/paper-texture.png");
+}
+
+/* ---------- 基础重置 ---------- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-serif);
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--ink);
+  background-color: var(--gaosu);
+  /* 2.1 浅色宣纸纹理半透明平铺 */
+  background-image: var(--texture-paper);
+  background-size: 420px;
+  background-repeat: repeat;
+  background-attachment: fixed;
+}
+
+img { max-width: 100%; display: block; }
+a { color: var(--tianqing); text-decoration: none; transition: color 0.3s ease; }
+a:hover { color: var(--zhuqing); }
+
+/* ---------- 2.5 顶部导航栏（半透明磨砂、滚动吸附） ---------- */
+.site-nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4vw;
+  height: 68px;
+  background: rgba(245, 240, 235, 0.72);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(104, 176, 171, 0.18);
+  transition: box-shadow 0.3s ease;
+}
+.site-nav.is-scrolled {
+  box-shadow: 0 4px 20px rgba(60, 60, 60, 0.10);
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-title);
+  font-size: 22px;
+  color: var(--yanzhi);
+  letter-spacing: 2px;
+}
+.nav-logo .logo-seal {
+  width: 34px; height: 34px;
+  display: grid; place-items: center;
+  border-radius: 8px;
+  background: var(--yanzhi);
+  color: #fff;
+  font-size: 16px;
+  font-family: var(--font-title);
+  box-shadow: 0 2px 6px rgba(192, 72, 81, 0.35);
+}
+
+.nav-links {
+  display: flex;
+  gap: 6px;
+  list-style: none;
+}
+.nav-links a {
+  display: block;
+  padding: 8px 20px;
+  border-radius: 999px;
+  font-family: var(--font-sans);
+  font-size: 15px;
+  color: var(--ink);
+}
+.nav-links a:hover { background: rgba(120, 146, 98, 0.14); color: var(--zhuqing); }
+.nav-links a.active { background: var(--zhuqing); color: #fff; }
+
+/* ---------- 页脚 ---------- */
+.site-footer {
+  margin-top: 72px;
+  padding: 36px 4vw;
+  text-align: center;
+  font-size: 14px;
+  color: var(--ink-light);
+  background: rgba(214, 236, 240, 0.35);
+  border-top: 1px solid rgba(104, 176, 171, 0.2);
+}
+.site-footer .footer-brand {
+  font-family: var(--font-title);
+  font-size: 18px;
+  color: var(--yanzhi);
+  letter-spacing: 3px;
+}
+
+/* ---------- 通用工具类 ---------- */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.text-center { text-align: center; }
+
+/* 祥云、山水等装饰元素通用定位 */
+.deco {
+  position: fixed;
+  pointer-events: none;
+  opacity: 0.35;
+  z-index: 0;
+  user-select: none;
+}
+
+/* 竖排文字（卷轴浮窗内使用） */
+.vertical-text {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  letter-spacing: 4px;
+}
+
+/* ---------- 「正在开发」占位页公共样式 ---------- */
+.placeholder-page {
+  min-height: calc(100vh - 68px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 96px 24px 60px;
+  text-align: center;
+}
+
+.placeholder-page .ph-icon {
+  font-size: 64px;
+  margin-bottom: 22px;
+  animation: ph-breathe 2.8s ease-in-out infinite;
+}
+
+@keyframes ph-breathe {
+  0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.85; }
+  50%      { transform: scale(1.1) rotate(4deg); opacity: 1; }
+}
+
+.placeholder-page .ph-title {
+  font-family: var(--font-title);
+  font-size: clamp(30px, 5vw, 44px);
+  color: var(--yanzhi);
+  letter-spacing: 8px;
+  margin-bottom: 14px;
+}
+
+.placeholder-page .ph-seal {
+  display: inline-block;
+  font-family: var(--font-title);
+  font-size: 15px;
+  color: var(--yanzhi);
+  letter-spacing: 4px;
+  border: 2px solid var(--yanzhi);
+  border-radius: 10px;
+  padding: 6px 16px;
+  margin-bottom: 22px;
+  transform: rotate(-4deg);
+  box-shadow: 0 2px 8px rgba(192, 72, 81, 0.25);
+}
+
+.placeholder-page .ph-desc {
+  max-width: 560px;
+  font-size: 15px;
+  line-height: 2.1;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+
+.placeholder-page .ph-hint {
+  font-size: 13px;
+  color: var(--zhuqing);
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+}
+
+.placeholder-page .ph-back {
+  display: inline-block;
+  padding: 11px 32px;
+  border-radius: 999px;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  color: #fff;
+  background: var(--zhuqing);
+  letter-spacing: 3px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.placeholder-page .ph-back:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(120, 146, 98, 0.42);
+  color: #fff;
+}
+
+/* 装饰：占位页背景云雾 */
+.ph-deco {
+  position: fixed;
+  pointer-events: none;
+  opacity: 0.3;
+  z-index: 0;
+}
+
+/* ---------- 国风自定义光标（仿 seu.edu.cn） ---------- */
+
+/* 有鼠标的设备：隐藏默认光标，由 JS 绘制自定义圆形跟随光标 */
+@media (hover: hover) and (pointer: fine) {
+  *, *::before, *::after { cursor: none !important; }
+}
+
+/* 内圆点（上层）：竹青，即时跟随鼠标 */
+.cursor-dot {
+  position: fixed;
+  top: 0; left: 0;
+  width: 21px; height: 21px;
+  margin: -10.5px 0 0 -10.5px;
+  border-radius: 50%;
+  background: rgba(120, 146, 98, 0.5);  /* 竹青半透明（透出下层杏黄） */
+  pointer-events: none;
+  z-index: 99999;
+  transition: width 0.25s, height 0.25s, margin 0.25s;
+}
+
+/* 外圆环（下层）：杏黄，延迟跟随 */
+.cursor-ring {
+  position: fixed;
+  top: 0; left: 0;
+  width: 21px; height: 21px;
+  margin: -10.5px 0 0 -10.5px;
+  border-radius: 50%;
+  border: 1.8px solid rgba(249, 193, 22, 0.55);    /* 杏黄半透明 */
+  background: rgba(249, 193, 22, 0.35);
+  pointer-events: none;
+  z-index: 99998;
+  transition: width 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+              height 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+              margin 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* 悬停可点击元素时：同步扩大，配色不变 */
+.cursor-ring.cursor-hover {
+  width: 32px; height: 32px;
+  margin: -16px 0 0 -16px;
+}
+.cursor-dot.cursor-hover {
+  width: 32px; height: 32px;
+  margin: -16px 0 0 -16px;
+}
+
+/* 点击时：同步缩小 → 反馈感，配色不变 */
+.cursor-ring.cursor-click {
+  width: 16px; height: 16px;
+  margin: -8px 0 0 -8px;
+}
+.cursor-dot.cursor-click {
+  width: 16px; height: 16px;
+  margin: -8px 0 0 -8px;
+}
+
+/* 触屏设备不启用 */
+@media (hover: none), (pointer: coarse) {
+  .cursor-dot, .cursor-ring { display: none; }
+  *, *::before, *::after { cursor: auto !important; }
+}

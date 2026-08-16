@@ -1,0 +1,798 @@
+/* ============================================================
+   css/game.css — 至善小当家厨房游戏页面样式
+   完整背景 + 三个器具精确定位
+   ============================================================ */
+
+.game-page {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 68px);
+}
+
+/* ---------- 顶部横幅 ---------- */
+.game-banner {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--zhuqing);
+  flex-shrink: 0;
+}
+
+.game-banner__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(3px) brightness(0.55);
+}
+
+.game-banner::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(40,40,40,0.2);
+}
+
+.game-banner__inner {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.game-banner__title {
+  font-family: var(--font-title);
+  font-size: clamp(34px, 6vw, 56px);
+  color: #fff;
+  letter-spacing: 10px;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.35);
+  margin-bottom: 8px;
+}
+
+.game-banner__sub {
+  font-size: 14px;
+  color: rgba(255,255,255,0.85);
+  letter-spacing: 5px;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.4);
+}
+
+/* ---------- 厨房舞台（完整背景，保持原始比例） ---------- */
+.kitchen-stage {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 2848 / 1600;   /* 背景图原始比例，不变形不裁剪 */
+  overflow: hidden;
+}
+
+/* 背景 img：与容器同比例，fill 不变形 */
+.kitchen-stage__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  display: block;
+  pointer-events: none;
+}
+
+/* 舞台遮罩（底部渐变，让文字更清晰） */
+.kitchen-stage::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 120px;
+  background: linear-gradient(transparent, rgba(0,0,0,0.25));
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ---------- 三个器具（精确定位叠加在背景上） ---------- */
+.stations-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.station {
+  /* ==========================================================
+     器具容器的定位方式
+     ----------------------------------------------------------
+     position: absolute  → 脱离文档流，相对最近的定位祖先
+                            （即 .kitchen-stage）进行定位
+     注意：居中偏移 translate(-50%,-50%) 已移到 .station__inner，
+           因为 GSAP 位移会覆盖本元素的 transform，
+           若居中写在 .station 上会被 GSAP 冲掉导致器具错位。
+     ----------------------------------------------------------
+     width 给一个明确的舞台百分比基准，
+     使内部 .station__icon 的百分比宽度不再依赖内容塌缩。
+     ========================================================== */
+  position: absolute;
+  width: 20%;               /* 器具宽度 = 舞台宽的 20%（可调） */
+  cursor: pointer;              /* 鼠标手型 */
+  pointer-events: auto;         /* 允许接收鼠标事件（覆盖父层 none） */
+}
+
+/* 内层：负责居中 + 内部纵向排列。
+   GSAP 只操作外层 .station 的 x/y，不会碰到这里的 transform */
+.station__inner {
+  position: relative;           /* 作为食材托盘的定位基准 */
+  display: flex;
+  flex-direction: column;   /* 图标在上、文字在下，纵向排列 */
+  align-items: center;      /* 图标与文字水平居中 */
+  gap: 6px;                 /* 图标与文字之间的间距 */
+  transform: translate(-50%, -50%);  /* 居中：left/top = 中心点 */
+}
+
+.station__icon {
+  /* ==========================================================
+     ★★★ 器具的【大小】控制点 ★★★
+     ----------------------------------------------------------
+     width  = 器具图占舞台宽度的百分比。
+              舞台 = .kitchen-stage（整张背景图）。
+     ----------------------------------------------------------
+     调整方法：
+       - 数值越大 → 器具越大
+       - 数值越小 → 器具越小
+     ----------------------------------------------------------
+     当前 1000% 表示：器具图片宽度 = 舞台宽度的 10 倍。
+     之所以要这么大的百分比，是因为图片自身带透明留白，
+     实际可见的器具内容只占图片的一小部分。
+     该值需要与你的素材图匹配，按视觉效果调整。
+     ----------------------------------------------------------
+     aspect-ratio: 1/1  → 强制宽高相等（正方形），
+                          放大时不会变形。
+     ========================================================== */
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  position: relative;       /* 作为内部三张 img 的定位基准 */
+  /* 注意：禁止在此添加 transition: transform！
+     否则 CSS 过渡会与 GSAP 的 transform 关键帧动画冲突，
+     导致铁锅晃动、盖子动画看起来不生效。 */
+}
+
+/* 三张图层：完整图/主体/盖子，全部绝对定位叠加在 icon 容器内 */
+.station__icon .full-img,
+.station__icon .body-img,
+.station__icon .lid-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+/* 盖子默认贴合在主体上（同一位置），动画时由 GSAP 位移/旋转 */
+.station__icon .lid-img {
+  will-change: transform;
+}
+
+/* ==========================================================
+   ★★★ 三个器具的【位置】控制点 ★★★
+   ----------------------------------------------------------
+   left / top = 器具中心点相对舞台的百分比坐标。
+                因为是百分比，所以任何屏幕尺寸下
+                器具都会精确落在背景图的同一位置。
+   ----------------------------------------------------------
+   调整方法：
+     - left 增大 → 向右移；left 减小 → 向左移
+     - top  增大 → 向下移；top  减小 → 向上移
+   ----------------------------------------------------------
+   背景图原始尺寸 2848x1600，换算公式：
+     left% = 像素x ÷ 2848 × 100
+     top%  = 像素y ÷ 1600 × 100
+   例如灶台圆心 (797,944)：
+     left% = 797÷2848×100 ≈ 28%，top% = 944÷1600×100 ≈ 59%
+   ----------------------------------------------------------
+   注意：修改这里后，必须同步修改下方
+   @media (max-width:900px) 和 @media (max-width:600px)
+   里的同名数值，否则手机/平板上位置不一致。
+   ========================================================== */
+.station--wok     { left: 31.5%; top: 59.0%; }   /* 铁锅：左灶台 (797,944) */
+.station--steamer { left: 49.3%; top: 57.1%; }   /* 蒸屉：中灶台 (1247,945)，上移2% */
+.station--claypot { left: 66.4%; top: 59.1%; }   /* 砂锅：右灶台 (1677,945) */
+
+/* 点击时晃两下（GSAP控制） */
+.station.is-shaking .station__icon {
+  animation: utensil-shake 0.6s ease;
+}
+
+@keyframes utensil-shake {
+  0%   { transform: rotate(0deg) translateX(0); }
+  10%  { transform: rotate(-8deg) translateX(-6px); }
+  25%  { transform: rotate( 8deg) translateX( 6px); }
+  40%  { transform: rotate(-6deg) translateX(-4px); }
+  55%  { transform: rotate( 6deg) translateX( 4px); }
+  70%  { transform: rotate(-3deg) translateX(-2px); }
+  85%  { transform: rotate( 3deg) translateX( 2px); }
+  100% { transform: rotate( 0deg) translateX(0); }
+}
+
+/* 开盖动画（蒸屉/砂锅） */
+.station.is-open .lid-img {
+  animation: lid-open 0.5s ease forwards;
+}
+
+@keyframes lid-open {
+  0%   { transform: translateY(0) rotate(0deg); opacity: 1; }
+  40%  { transform: translateY(-30px) rotate(-15deg); opacity: 1; }
+  100% { transform: translateY(-50px) rotate(-25deg); opacity: 0.7; }
+}
+
+/* ---------- 提示弹窗 ---------- */
+.drop-hint {
+  position: fixed;
+  /* 定位：靠右侧，垂直居中（不遮挡中央的器具） */
+  right: 4%;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 20px 14px;
+  border-radius: 14px;
+  font-family: var(--font-title);
+  font-size: 20px;
+  letter-spacing: 5px;
+  text-align: center;
+  /* 竖排文字：从上到下书写（国风卷轴式提示） */
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  z-index: 1000;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.drop-hint.is-visible { opacity: 1; }
+.drop-hint.is-success {
+  background: rgba(92, 184, 92, 0.94);
+  color: #fff;
+  box-shadow: 0 8px 32px rgba(92, 184, 92, 0.4);
+}
+.drop-hint.is-info {
+  background: rgba(120, 146, 98, 0.94);
+  color: #fff;
+  box-shadow: 0 8px 32px rgba(120, 146, 98, 0.4);
+}
+
+/* ---------- 底部提示 ---------- */
+.game-hint-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px;
+  text-align: center;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  color: rgba(255,255,255,0.7);
+  letter-spacing: 3px;
+  background: linear-gradient(transparent, rgba(0,0,0,0.3));
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* ==========================================================
+   响应式断点
+   ----------------------------------------------------------
+   屏幕宽度 ≤ 900px（平板）时生效的覆盖值。
+   这里与桌面端保持相同的 大小(width) 和 位置(left/top)，
+   目的是让器具在平板/手机上依然精确落在灶台上。
+
+   ★ 修改桌面端数值后，请同步修改这里，
+     否则小屏幕上位置/大小会不一致。
+   ========================================================== */
+@media (max-width: 900px) {
+  .station--wok     { left: 31.5%; top: 59%; }           /* 铁锅位置（平板） */
+  .station--steamer { left: 49.3%; top: 57.1%; }         /* 蒸屉位置（平板） */
+  .station--claypot { left: 66.4%; top: 59.1%; }         /* 砂锅位置（平板） */
+}
+
+/* ==========================================================
+   响应式断点（手机）
+   ----------------------------------------------------------
+   屏幕宽度 ≤ 600px（手机）时生效的覆盖值。
+   ========================================================== */
+@media (max-width: 600px) {
+  .station--wok     { left: 31.5%; top: 59%; }           /* 铁锅位置（手机） */
+  .station--steamer { left: 49.3%; top: 57.1%; }         /* 蒸屉位置（手机） */
+  .station--claypot { left: 66.4%; top: 59.1%; }         /* 砂锅位置（手机） */
+  .kitchen-stage { min-height: 380px; }                  /* 手机端舞台最小高度 */
+}
+
+/* ==========================================================
+   左侧食材选择栏（食材柜）
+   ----------------------------------------------------------
+   固定于视口左侧，竖排展示食材。
+   结构：
+     .ingredients-panel（外框）
+       ├ .ingredients-panel__head     （标题 + 放大镜按钮）
+       ├ .ingredients-panel__searchbox（搜索输入框，默认隐藏）
+       └ .ingredients-panel__list     （食材列表，竖排）
+   ========================================================== */
+.ingredients-panel {
+  position: fixed;                 /* 固定在视口左侧，不随滚动 */
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 900;
+  width: 128px;
+  max-height: 72vh;                /* 最高不超过视口72%，超高内部滚动 */
+  display: flex;
+  flex-direction: column;          /* 竖排 */
+  background: rgba(46, 38, 30, 0.82);   /* 深棕半透明（厨房木质感） */
+  border: 1px solid rgba(255, 215, 160, 0.28);
+  border-radius: 14px;
+  padding: 12px 10px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35);
+}
+
+/* ---- 头部：标题 + 放大镜按钮 ---- */
+.ingredients-panel__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 215, 160, 0.18);
+  margin-bottom: 8px;
+}
+
+.ingredients-panel__title {
+  font-family: var(--font-title);
+  font-size: 15px;
+  color: #ffe9c4;
+  letter-spacing: 3px;
+}
+
+.ingredients-panel__search-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 215, 160, 0.14);
+  color: #ffd9a0;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.ingredients-panel__search-btn:hover {
+  background: rgba(255, 215, 160, 0.3);
+}
+
+.ingredients-panel__search-btn.is-active {
+  background: #d9a05b;
+  color: #2e261e;
+  transform: rotate(90deg);
+}
+
+/* ---- 搜索输入框 ---- */
+.ingredients-panel__searchbox {
+  padding-bottom: 8px;
+}
+
+.ingredients-panel__searchbox input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 6px 8px;
+  border: 1px solid rgba(255, 215, 160, 0.3);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 13px;
+  outline: none;
+}
+
+.ingredients-panel__searchbox input::placeholder {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.ingredients-panel__searchbox input:focus {
+  border-color: #d9a05b;
+}
+
+/* ---- 食材列表（竖排 + 内部滚动） ---- */
+.ingredients-panel__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;                /* 食材多时内部滚动 */
+  flex: 1;
+}
+
+.ingredients-panel__list::-webkit-scrollbar {
+  width: 5px;
+}
+
+.ingredients-panel__list::-webkit-scrollbar-thumb {
+  background: rgba(255, 215, 160, 0.25);
+  border-radius: 3px;
+}
+
+/* 单个食材项：竖排一行一个，图标 + 名称横排 */
+.ingredients-panel__item {
+  display: flex;
+  align-items: center;
+  gap: 7px;                          /* 图标与名称间距 */
+  padding: 7px 8px;
+  border-radius: 8px;
+  cursor: grab;                      /* 抓手光标：提示可拖 */
+  font-size: 14px;
+  color: rgba(255, 244, 224, 0.88);
+  letter-spacing: 1px;
+  transition: background 0.15s ease, color 0.15s ease;
+  user-select: none;                 /* 禁止选中文字，避免拖拽误选 */
+  -webkit-user-drag: none;           /* 禁止整行原生拖拽 */
+}
+
+/* 食材 PNG 图标（120x120 透明抠图） */
+.ingredients-panel__item-icon {
+  flex-shrink: 0;
+  width: 30px;                       /* 固定宽度，保证文字对齐 */
+  height: 30px;
+  display: inline-block;
+  object-fit: contain;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.18);  /* 浅色衬底衬托透明食材图 */
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
+}
+
+/* ==========================================================
+   拖拽中的食材图标克隆体
+   ----------------------------------------------------------
+   拖起时克隆到页面顶层，放大 + 酒红色滤镜，醒目易见。
+   竹青 #789262 → 酒红（sepia 打底后旋转色相至红系）
+   ========================================================== */
+.ingredients-panel__item-icon.is-dragging {
+  filter: sepia(1) saturate(3.2) hue-rotate(-38deg) brightness(0.82)
+          drop-shadow(0 6px 14px rgba(139, 26, 43, 0.55));
+}
+
+.ingredients-panel__item:hover {
+  background: rgba(255, 215, 160, 0.16);
+  color: #fff;
+}
+
+/* 选中态：点亮为金色 */
+.ingredients-panel__item.is-picked {
+  background: #d9a05b;
+  color: #2e261e;
+  font-weight: 700;
+}
+
+/* 无匹配结果提示 */
+.ingredients-panel__empty {
+  padding: 10px 4px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+}
+
+/* ---- 手机端：面板收窄、贴左不挡灶台 ---- */
+@media (max-width: 600px) {
+  .ingredients-panel {
+    left: 8px;
+    width: 104px;
+    padding: 10px 8px;
+    max-height: 60vh;
+  }
+}
+
+/* ============================================================
+   食材栏头部工具按钮（配方表 + 搜索）
+   ============================================================ */
+.ingredients-panel__tools {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.ingredients-panel__recipe-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 215, 160, 0.14);
+  font-size: 15px;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.ingredients-panel__recipe-btn:hover {
+  background: rgba(255, 215, 160, 0.3);
+  transform: scale(1.08);
+}
+
+/* ============================================================
+   器具食材槽位（每个器具 5 格，水平对齐）
+   ----------------------------------------------------------
+   托盘挂 .stations-layer（舞台覆盖层），
+   left/top 由 JS 设为舞台百分比 → 三排槽位绝对水平对齐。
+   ============================================================ */
+.station__tray {
+  position: absolute;           /* 相对舞台覆盖层定位 */
+  transform: translateX(-50%);  /* 以器具中心为基准 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+  background: rgba(0, 0, 0, 0.35);
+  border-radius: 10px;
+  backdrop-filter: blur(2px);
+  z-index: 6;
+  pointer-events: none;         /* 不挡器具点击 */
+}
+
+/* 单个槽位：固定 24px 方块 */
+.station__tray-slot {
+  width: 24px;
+  height: 24px;
+  border: 1.5px dashed rgba(255, 255, 255, 0.4);  /* 空槽：虚线 */
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.06);
+  position: relative;
+}
+
+/* 已投入的槽：实线 + 白底，显示食材图标和数量 */
+.station__tray-slot.is-filled {
+  border-style: solid;
+  border-color: rgba(249, 193, 22, 0.7);
+  background: rgba(255, 255, 255, 0.92);
+}
+
+.station__tray-slot.is-filled img {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  border-radius: 3px;
+}
+
+.station__tray-slot.is-filled i {
+  position: absolute;
+  right: -2px;
+  bottom: -2px;
+  font-style: normal;
+  font-size: 9px;
+  line-height: 1;
+  color: #fff;
+  background: var(--yanzhi);
+  border-radius: 6px;
+  padding: 1px 3px;
+}
+
+/* ============================================================
+   菜品详情弹层（配方匹配成功）
+   ============================================================ */
+.dish-detail-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(30, 24, 16, 0.6);
+  backdrop-filter: blur(4px);
+}
+
+.dish-detail-card {
+  position: relative;
+  width: 340px;
+  max-width: 90vw;
+  background: var(--gaosu);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.45);
+}
+
+.dish-detail-card__close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  z-index: 2;
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.45);
+  color: #fff;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.dish-detail-card__close:hover { background: rgba(0, 0, 0, 0.7); }
+
+.dish-detail-card__img {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--yuebai);
+}
+.dish-detail-card__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.dish-detail-card__body {
+  padding: 18px 20px 22px;
+}
+
+.dish-detail-card__name {
+  font-family: var(--font-title);
+  font-size: 22px;
+  color: var(--yanzhi);
+  letter-spacing: 3px;
+  margin-bottom: 4px;
+}
+
+.dish-detail-card__subtitle {
+  font-size: 13px;
+  color: var(--ink-light);
+  margin-bottom: 12px;
+}
+
+.dish-detail-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.dish-detail-card__tag {
+  font-size: 12px;
+  padding: 3px 12px;
+  border-radius: 999px;
+  background: rgba(120, 146, 98, 0.18);
+  color: var(--zhuqing);
+  border: 1px solid rgba(120, 146, 98, 0.4);
+}
+
+.dish-detail-card__link {
+  display: inline-block;
+  padding: 9px 22px;
+  border-radius: 999px;
+  background: var(--zhuqing);
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 2px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.dish-detail-card__link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(120, 146, 98, 0.4);
+  color: #fff;
+}
+
+/* ============================================================
+   配方表弹层
+   ============================================================ */
+.recipe-book-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(30, 24, 16, 0.6);
+  backdrop-filter: blur(4px);
+}
+
+.recipe-book {
+  position: relative;
+  width: 480px;
+  max-width: 92vw;
+  max-height: 84vh;
+  overflow-y: auto;
+  background: var(--gaosu);
+  border-radius: 16px;
+  padding: 28px 26px 22px;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.45);
+}
+
+.recipe-book__close {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.1);
+  color: var(--ink);
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.recipe-book__close:hover { background: rgba(0, 0, 0, 0.2); }
+
+.recipe-book__title {
+  font-family: var(--font-title);
+  font-size: 24px;
+  color: var(--yanzhi);
+  letter-spacing: 6px;
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.recipe-book__list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.recipe-book__item {
+  background: #fff;
+  border: 1px solid rgba(104, 176, 171, 0.22);
+  border-radius: 12px;
+  padding: 14px 16px;
+  box-shadow: var(--shadow-soft);
+}
+
+.recipe-book__item-head {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.recipe-book__utensil {
+  font-size: 12px;
+  padding: 2px 12px;
+  border-radius: 999px;
+  background: var(--yanzhi);
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+.recipe-book__name {
+  font-family: var(--font-title);
+  font-size: 18px;
+  color: var(--ink);
+  letter-spacing: 2px;
+}
+
+.recipe-book__ings {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.recipe-book__ing {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 13px;
+  color: var(--ink);
+  background: rgba(120, 146, 98, 0.1);
+  border-radius: 8px;
+  padding: 3px 10px 3px 4px;
+  border: 1px solid rgba(120, 146, 98, 0.25);
+}
+
+.recipe-book__ing img {
+  border-radius: 4px;
+  display: block;
+}
+
+.recipe-book__tip {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 12px;
+  color: var(--ink-light);
+  letter-spacing: 1px;
+}

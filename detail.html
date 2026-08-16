@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>美食详情 · 至善百味行</title>
+  <meta name="description" content="至善百味行美食详情页——品味各省饮食文化，探寻风味背后的故事。">
+
+  <!-- 字体：2.3 字体方案 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@400;500;700&family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+
+  <!-- 全站样式 -->
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/detail.css">
+
+  <!-- GSAP 核心库（2.6 动效设计） -->
+  <script src="assets/vendor/gsap.min.js" defer></script>
+</head>
+<body>
+
+  <!-- 2.5 顶部导航栏（与首页一致） -->
+  <nav class="site-nav" id="site-nav">
+    <a class="nav-logo" href="index.html">
+      <span class="logo-seal">至</span>
+      <span>至善百味行</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">首页</a></li>
+      <li><a href="game.html">至善小当家</a></li>
+      <li><a href="about.html">关于</a></li>
+    </ul>
+  </nav>
+
+  <main class="detail-page">
+
+    <!-- 面包屑 -->
+    <nav class="breadcrumb detail-breadcrumb" aria-label="面包屑">
+      <a href="index.html">首页</a>
+      <span class="sep">›</span>
+      <a href="#" id="province-link">…</a>
+      <span class="sep">›</span>
+      <span class="current" id="dish-name">…</span>
+    </nav>
+
+    <!-- 主内容：左侧大图 + 右侧文字 -->
+    <div class="detail-main">
+
+      <!-- 左侧：轮播大图（JS 渲染） -->
+      <div class="detail-carousel" id="detail-carousel">
+        <!-- 由 js/detail.js 动态渲染 -->
+      </div>
+
+      <!-- 右侧：文字内容（JS 渲染） -->
+      <div class="detail-content" id="detail-content">
+        <!-- 由 js/detail.js 动态渲染 -->
+      </div>
+
+    </div>
+
+    <!-- 空状态（菜品不存在时显示） -->
+    <div class="detail-empty" id="detail-empty" style="display:none;">
+      <div class="detail-empty__icon">🍽️</div>
+      <h2 class="detail-empty__title">此菜暂未收录</h2>
+      <p class="detail-empty__text">
+        这道风味尚未被收录于当前的美食地图之中，
+        大厨们正在四处寻访，待他们携滋味归来，便会为这道菜留一席之地。
+      </p>
+      <a class="detail-content__back" href="index.html" style="display:inline-flex;">
+        ← 返回首页，继续漫游
+      </a>
+    </div>
+
+  </main>
+
+  <!-- 2.5 页脚 -->
+  <footer class="site-footer">
+    <div class="footer-brand">至善百味行</div>
+    <p>以互动版图漫游三十四个省级行政区的饮食文化 · 本项目为静态网站，数据驱动呈现</p>
+    <p>© 2025 至善百味行 · 版权所有</p>
+  </footer>
+
+  <!-- 页面脚本 -->
+  <script src="js/utils.js" defer></script>
+  <script src="js/cursor.js" defer></script>
+  <script src="js/detail.js" defer></script>
+</body>
+</html>

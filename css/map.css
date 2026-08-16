@@ -1,0 +1,199 @@
+/* ============================================================
+   css/map.css — 地图页样式（首页）
+   依据《至善百味行网站设计思路书》2.1 / 2.2 / 2.4 / 2.6 编写
+   ============================================================ */
+
+/* ---------- 首页地图主区域 ---------- */
+.map-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 地图居中占据视口主体区域 */
+.map-hero {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 24px 32px;
+  min-height: calc(100vh - 68px);
+}
+
+.map-hero .page-title {
+  font-family: var(--font-title);
+  font-size: clamp(28px, 4vw, 40px);
+  color: var(--yanzhi);
+  letter-spacing: 8px;
+  margin-bottom: 6px;
+  text-shadow: 0 2px 10px rgba(192, 72, 81, 0.12);
+}
+
+.map-hero .page-subtitle {
+  font-size: clamp(13px, 1.6vw, 16px);
+  color: var(--ink-light);
+  letter-spacing: 4px;
+  margin-bottom: 20px;
+}
+
+/* ---------- 地图容器 ---------- */
+#map-container {
+  position: relative;
+  width: min(940px, 95vw);
+  /* 不设固定 aspect-ratio，让 SVG 自然撑开；viewBox="400 220" 比例约 1.82:1 */
+  cursor: pointer;
+}
+
+#china-map {
+  width: 100%;
+  height: auto;
+  display: block;
+  overflow: visible;
+}
+
+/* 各省 path 的默认与悬停状态
+   设计文档 2.2：悬停时微微加深约 15%，配合轻微上浮阴影，
+   营造水墨晕染的视觉反馈。填充色由 JS 依据 provinces.json 注入。 */
+#china-map .province {
+  fill: #C8BFAF;             /* 默认底色（JS 注入后会被覆盖） */
+  stroke: #FDFBF8;           /* 省界浅色描边，如宣纸上的墨线 */
+  stroke-width: 1.1;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+  transition: filter 0.25s ease, transform 0.25s ease;
+  cursor: pointer;
+}
+
+/* GSAP 会接管 fill 与 transform 的动效；
+   这里仅提供静态兜底与阴影质感 */
+#china-map .province:hover {
+  filter: drop-shadow(0 4px 10px rgba(70, 60, 50, 0.28));
+}
+
+#china-map .province.is-active {
+  filter: drop-shadow(0 6px 14px rgba(70, 60, 50, 0.34));
+}
+
+/* ---------- 竖排卷轴浮窗 ---------- */
+.map-tooltip {
+  position: absolute;
+  z-index: 50;
+  width: 132px;
+  padding: 18px 14px 22px;
+  background: linear-gradient(180deg, #FBF7F0 0%, #F3E8D8 100%);
+  border: 1px solid rgba(192, 72, 81, 0.35);
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(80, 60, 40, 0.25);
+  /* 卷轴两端装饰 */
+}
+.map-tooltip::before,
+.map-tooltip::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 78px; height: 6px;
+  background: linear-gradient(90deg, #C04851, #E09A7A, #C04851);
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.18);
+}
+.map-tooltip::before { top: -3px; }
+.map-tooltip::after  { bottom: -3px; }
+
+.map-tooltip .tt-province {
+  font-family: var(--font-title);
+  font-size: 24px;
+  color: var(--yanzhi);
+  letter-spacing: 4px;
+  margin-bottom: 10px;
+}
+
+.map-tooltip .tt-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+.map-tooltip .tt-tag {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  padding: 2px 10px;
+  border-radius: 999px;
+  background: rgba(249, 193, 22, 0.28);
+  color: #8A6A00;
+  border: 1px solid rgba(249, 193, 22, 0.45);
+  white-space: nowrap;
+}
+
+.map-tooltip .tt-desc {
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--ink);
+  text-align: center;
+}
+
+.map-tooltip .tt-hint {
+  margin-top: 10px;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  color: var(--zhuqing);
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+/* 浮窗初始状态由 GSAP 控制（opacity 0, y 12） */
+.map-tooltip {
+  opacity: 0;
+  transform: translateY(12px);
+  pointer-events: none;
+}
+
+/* ---------- 地图下方引导区 ---------- */
+.map-guide {
+  margin-top: 26px;
+  text-align: center;
+  font-size: 14px;
+  color: var(--ink-light);
+  letter-spacing: 3px;
+}
+.map-guide .guide-icon {
+  display: inline-block;
+  margin-right: 8px;
+  color: var(--yanzhi);
+  animation: float-y 2.4s ease-in-out infinite;
+}
+
+@keyframes float-y {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-5px); }
+}
+
+/* ---------- 国风装饰元素（边角祥云、水墨山峦） ---------- */
+.deco-cloud-l {
+  left: -20px; top: 96px;
+  width: 150px; height: 150px;
+}
+.deco-cloud-r {
+  right: -16px; top: 120px;
+  width: 120px; height: 120px;
+}
+.deco-mountain {
+  left: 5%; bottom: 8px;
+  width: 260px; height: 130px;
+  opacity: 0.18;
+}
+.deco-blossom {
+  right: 7%; bottom: 60px;
+  width: 110px; height: 110px;
+}
+
+/* ---------- 响应式 ---------- */
+@media (max-width: 768px) {
+  #map-container { width: 98vw; }
+  .map-tooltip { width: 112px; }
+  .map-tooltip .tt-province { font-size: 20px; }
+  .deco-cloud-l, .deco-cloud-r, .deco-mountain, .deco-blossom { display: none; }
+}

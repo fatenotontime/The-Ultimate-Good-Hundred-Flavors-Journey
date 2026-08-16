@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>关于 · 至善百味行</title>
+  <meta name="description" content="了解至善百味行——以互动版图漫游中华饮食文化的静态网站项目。">
+
+  <!-- 字体：2.3 字体方案 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@400;500;700&family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+
+  <!-- 全站样式 -->
+  <link rel="stylesheet" href="css/global.css">
+
+  <!-- GSAP 核心库（2.6 动效设计） -->
+  <script src="assets/vendor/gsap.min.js" defer></script>
+</head>
+<body>
+
+  <!-- 2.5 顶部导航栏（与首页一致） -->
+  <nav class="site-nav" id="site-nav">
+    <a class="nav-logo" href="index.html">
+      <span class="logo-seal">至</span>
+      <span>至善百味行</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">首页</a></li>
+      <li><a href="game.html">至善小当家</a></li>
+      <li><a href="about.html" class="active">关于</a></li>
+    </ul>
+  </nav>
+
+  <main class="placeholder-page">
+    <!-- 国风装饰：边角淡色祥云、水墨山峦 -->
+    <svg class="deco ph-deco" viewBox="0 0 100 100" style="left:-16px;bottom:140px;width:150px;height:150px;" aria-hidden="true">
+      <path d="M20 62c-2-10 6-20 18-20 2-12 16-18 26-12 6-8 20-6 24 4 10 0 14 10 10 18H24c-6 2-8 8-4 10z" fill="#D6ECF0"/>
+    </svg>
+    <svg class="deco ph-deco" viewBox="0 0 260 130" preserveAspectRatio="xMidYMax meet" style="right:4%;top:120px;width:220px;height:110px;" aria-hidden="true">
+      <path d="M0 130 L40 60 L70 95 L110 30 L150 90 L185 50 L220 105 L260 70 L260 130 Z" fill="#789262"/>
+    </svg>
+
+    <div class="ph-icon">📜</div>
+    <h1 class="ph-title">关于本站</h1>
+    <span class="ph-seal">正在开发</span>
+    <p class="ph-desc">
+      「至善百味行」是一张以中国各省饮食文化为主题的互动版图，
+      从东北炖菜到岭南煲汤，从巴蜀麻辣到江浙清甜，指尖即可漫游。
+    </p>
+    <p class="ph-desc">
+      关于页的笔墨还在研磨——项目缘起、团队故事与数据说明，
+      将陆续铺陈于此卷之上。
+    </p>
+    <p class="ph-hint">敬请期待 · 稍后再来细读 ✨</p>
+    <a class="ph-back" href="index.html">返回首页 · 继续漫游</a>
+  </main>
+
+  <!-- 2.5 页脚 -->
+  <footer class="site-footer">
+    <div class="footer-brand">至善百味行</div>
+    <p>以互动版图漫游三十四个省级行政区的饮食文化 · 本项目为静态网站，数据驱动呈现</p>
+    <p>© 2025 至善百味行 · 版权所有</p>
+  </footer>
+
+  <!-- 页面脚本（导航吸附 + 光标） -->
+  <script>
+    (() => {
+      const nav = document.getElementById('site-nav');
+      window.addEventListener('scroll', () => {
+        nav.classList.toggle('is-scrolled', window.scrollY > 8);
+      }, { passive: true });
+    })();
+  </script>
+  <script src="js/cursor.js" defer></script>
+</body>
+</html>

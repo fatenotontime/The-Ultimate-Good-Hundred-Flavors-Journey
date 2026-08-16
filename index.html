@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>至善百味行 · 首页</title>
+  <meta name="description" content="以可交互的中国版图为入口，指尖漫游三十四个省级行政区的餐桌风味。">
+
+  <!-- 字体：2.3 字体方案（思源宋体/黑体 + 书法标题字体） -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@400;500;700&family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+
+  <!-- 全站样式 -->
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/map.css">
+
+  <!-- GSAP 核心库（2.6 动效设计，本地化） -->
+  <script src="assets/vendor/gsap.min.js" defer></script>
+</head>
+<body>
+
+  <!-- 2.5 顶部导航栏（半透明磨砂、滚动吸附） -->
+  <nav class="site-nav" id="site-nav">
+    <a class="nav-logo" href="index.html">
+      <span class="logo-seal">至</span>
+      <span>至善百味行</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">首页</a></li>
+      <li><a href="game.html">至善小当家</a></li>
+      <li><a href="about.html">关于</a></li>
+    </ul>
+  </nav>
+
+  <main class="map-page">
+
+    <!-- 2.1 国风装饰：边角淡色祥云、水墨山峦 -->
+    <svg class="deco deco-cloud-l" viewBox="0 0 100 100" aria-hidden="true">
+      <path d="M20 62c-2-10 6-20 18-20 2-12 16-18 26-12 6-8 20-6 24 4 10 0 14 10 10 18H24c-6 2-8 8-4 10z" fill="#D6ECF0"/>
+    </svg>
+    <svg class="deco deco-cloud-r" viewBox="0 0 100 100" aria-hidden="true">
+      <path d="M18 58c-1-8 5-16 14-16 2-9 13-14 21-9 5-6 15-5 19 3 8-1 12 8 9 14H22c-5 1-6 6-4 8z" fill="#D6ECF0"/>
+    </svg>
+    <svg class="deco deco-mountain" viewBox="0 0 260 130" preserveAspectRatio="xMidYMax meet" aria-hidden="true">
+      <path d="M0 130 L40 60 L70 95 L110 30 L150 90 L185 50 L220 105 L260 70 L260 130 Z" fill="#789262"/>
+    </svg>
+    <svg class="deco deco-blossom" viewBox="0 0 110 110" aria-hidden="true">
+      <circle cx="55" cy="55" r="20" fill="#C04851" opacity="0.5"/>
+      <circle cx="55" cy="28" r="16" fill="#E09A7A" opacity="0.6"/>
+      <circle cx="55" cy="82" r="16" fill="#E09A7A" opacity="0.6"/>
+      <circle cx="28" cy="55" r="16" fill="#E09A7A" opacity="0.6"/>
+      <circle cx="82" cy="55" r="16" fill="#E09A7A" opacity="0.6"/>
+      <circle cx="55" cy="55" r="7" fill="#F9C116" opacity="0.8"/>
+    </svg>
+
+    <!-- 第一层：首页（交互式中国地图），2.4 -->
+    <section class="map-hero">
+      <h1 class="page-title">至善百味行</h1>
+      <p class="page-subtitle">指尖漫游 · 遍尝华夏风味</p>
+
+      <!-- 地图容器：2.6 点击过渡动画作用对象 -->
+      <div id="map-container">
+        <!-- 中国地图 SVG（34 省级行政区），内容由 js/map.js 从 china.svg 注入 -->
+        <svg id="china-map" viewBox="59.71 -54.56 54.41 52.86"
+             xmlns="http://www.w3.org/2000/svg" role="img"
+             aria-label="中国省级行政区交互地图">
+          <text id="map-loading" x="86.9" y="-28.1" text-anchor="middle"
+                font-family="ZCOOL KuaiLe, cursive" font-size="3.5"
+                fill="#789262" opacity="0.85">正在加载地图…</text>
+        </svg>
+
+        <!-- 竖排卷轴浮窗（2.4：省名 + 代表性口味标签 + 一句话饮食特征） -->
+        <div class="map-tooltip" id="map-tooltip" aria-live="polite">
+          <div class="tt-province" id="tt-province"></div>
+          <div class="tt-tags" id="tt-tags"></div>
+          <div class="tt-desc" id="tt-desc"></div>
+          <div class="tt-hint">点击进入该省美食</div>
+        </div>
+      </div>
+
+      <p class="map-guide">
+        <span class="guide-icon">◆</span>悬停省份查看风味 · 点击漫游其餐桌
+      </p>
+    </section>
+  </main>
+
+  <!-- 2.5 页脚 -->
+  <footer class="site-footer">
+    <div class="footer-brand">至善百味行</div>
+    <p>以互动版图漫游三十四个省级行政区的饮食文化 · 本项目为静态网站，数据驱动呈现</p>
+    <p>© 2025 至善百味行 · 版权所有</p>
+  </footer>
+
+  <!-- 页面脚本 -->
+  <script src="js/utils.js" defer></script>
+  <script src="js/cursor.js" defer></script>
+  <script src="js/map.js" defer></script>
+</body>
+</html>
