@@ -23,3 +23,6 @@ Desktop.ini
 # IDE
 .vscode/
 .idea/
+
+# 源素材目录（原始大文件，不入库；仅入库处理后的 assets/ 产物）
+image/
