@@ -210,20 +210,6 @@
       "link": "detail.html?province=tianjin&dish=shuli-gao"
     },
     {
-      "id": "bao-bing",
-      "name": "刨冰",
-      "subtitle": "夏日冰凉甜品",
-      "utensil": "claypot",
-      "utensilName": "砂锅",
-      "ingredients": [
-        "大米",
-        "红枣",
-        "鸡蛋"
-      ],
-      "thumbnail": "assets/images/provinces/tianjin/bao-bing-thumb.webp",
-      "link": "detail.html?province=tianjin&dish=bao-bing"
-    },
-    {
       "id": "bazhen-doufu",
       "name": "八珍豆腐",
       "subtitle": "外酥里嫩咸鲜浓郁",
@@ -244,9 +230,7 @@
       "utensil": "wok",
       "utensilName": "铁锅",
       "ingredients": [
-        "面粉",
-        "鸡蛋",
-        "猪肉"
+        "面粉"
       ],
       "thumbnail": "assets/images/provinces/tianjin/shibajie-mahua-thumb.webp",
       "link": "detail.html?province=tianjin&dish=shibajie-mahua"

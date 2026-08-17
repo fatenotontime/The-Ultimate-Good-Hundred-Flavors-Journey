@@ -90,27 +90,6 @@
       ]
     },
     {
-      "id": "bao-bing",
-      "name": "刨冰",
-      "subtitle": "夏日冰凉甜品",
-      "thumbnail": "assets/images/provinces/tianjin/bao-bing-thumb.webp",
-      "images": [
-        "assets/images/provinces/tianjin/bao-bing-full.webp"
-      ],
-      "tags": [
-        "冰品",
-        "夏日",
-        "甜食"
-      ],
-      "origin": "天津 · 滨江道",
-      "description": "天津刨冰：细碎冰沙配水果红豆，清凉酸甜，是天津人夏日的共同记忆。老式刨冰用铁刨子手摇出冰花，现在用机器，但那份冰凉透心的感觉没变。",
-      "ingredients": [
-        "大米",
-        "红枣",
-        "鸡蛋"
-      ]
-    },
-    {
       "id": "bazhen-doufu",
       "name": "八珍豆腐",
       "subtitle": "外酥里嫩咸鲜浓郁",
