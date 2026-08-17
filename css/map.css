@@ -72,6 +72,24 @@
   filter: drop-shadow(0 4px 10px rgba(70, 60, 50, 0.28));
 }
 
+#china-map .province:focus {
+  outline: none;
+}
+
+/* 用 SVG 自身的描边表达键盘焦点，避开 Chromium 对复杂 path
+   原生 outline 的错误栅格化。 */
+#china-map .province:focus-visible {
+  stroke: #C04851;
+  stroke-width: 2.4;
+  filter: drop-shadow(0 0 5px rgba(192, 72, 81, 0.42));
+}
+
+/* 离场淡出时关闭 SVG 滤镜合成，避免 Edge 产生黑块/白色弧框。 */
+#map-container.is-leaving #china-map .province {
+  filter: none !important;
+  transition: none;
+}
+
 #china-map .province.is-active {
   filter: drop-shadow(0 6px 14px rgba(70, 60, 50, 0.34));
 }

@@ -21,11 +21,13 @@
   const ttTags    = document.getElementById('tt-tags');
   const ttDesc    = document.getElementById('tt-desc');
   const nav       = document.getElementById('site-nav');
+  const mapContainer = document.getElementById('map-container');
 
   const provinceMeta = new Map();   // id -> 省份数据
   const pathEls      = new Map();   // id -> path 元素
 
   let mapReady = false;
+  let navigationPending = false;
 
   /* ----------------------------------------------------------
      加载 china.svg 并注入到 #china-map
@@ -179,11 +181,34 @@
   /* ----------------------------------------------------------
      2.6-c 点击过渡动画（方案A：淡出 + 滚动）
      ---------------------------------------------------------- */
+  function restoreMapPageState() {
+    gsap.killTweensOf(mapContainer);
+    gsap.killTweensOf(tooltip);
+    gsap.set(mapContainer, { clearProps: 'opacity' });
+    gsap.set(tooltip, { clearProps: 'opacity,transform' });
+    mapContainer.classList.remove('is-leaving');
+    navigationPending = false;
+
+    const activeElement = document.activeElement;
+    if (activeElement?.matches('#china-map .province')) {
+      activeElement.blur();
+    }
+  }
+
   function bindClick(path, meta) {
     path.addEventListener('click', () => {
-      if (!mapReady) return;
+      if (!mapReady || navigationPending) return;
+      navigationPending = true;
+
+      // 移除 Chromium 为复杂 SVG path 绘制的原生点击焦点轮廓，
+      // 并关闭离场阶段的悬停浮窗与滤镜合成。
+      path.blur();
+      gsap.killTweensOf(tooltip);
+      gsap.set(tooltip, { opacity: 0, y: 12 });
+      mapContainer.classList.add('is-leaving');
+
       // 方案A（极简）：地图淡出后跳转（代码示例）
-      gsap.to('#map-container', {
+      gsap.to(mapContainer, {
         opacity: 0,
         duration: 0.4,
         ease: 'power1.in',
@@ -313,4 +338,11 @@
   } else {
     init();
   }
+
+  // 页面进入历史缓存前移除离场内联状态；不同浏览器的 BFCache
+  // 时序不一致，因此在持久化 pageshow 时再幂等恢复一次。
+  window.addEventListener('pagehide', restoreMapPageState);
+  window.addEventListener('pageshow', event => {
+    if (event.persisted) restoreMapPageState();
+  });
 })();

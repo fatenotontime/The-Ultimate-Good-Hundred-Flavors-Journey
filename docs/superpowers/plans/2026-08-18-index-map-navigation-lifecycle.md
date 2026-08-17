@@ -16,11 +16,11 @@
 - Modify: `css/map.css:59-77`
 - Test: local Edge against `http://127.0.0.1:8080/index.html`
 
-- [ ] **Step 1: Verify the failing behavior**
+- [x] **Step 1: Verify the failing behavior**
 
 Click a province in Edge and capture the frame 120 ms later. Before the fix, the active SVG path reports an `outline` containing `auto 5px`, and black/white rendering artifacts are visible.
 
-- [ ] **Step 2: Add an explicit accessible focus style**
+- [x] **Step 2: Add an explicit accessible focus style**
 
 ```css
 #china-map .province:focus {
@@ -34,7 +34,7 @@ Click a province in Edge and capture the frame 120 ms later. Before the fix, the
 }
 ```
 
-- [ ] **Step 3: Verify the click and keyboard states**
+- [x] **Step 3: Verify the click and keyboard states**
 
 Confirm mouse click no longer produces a native SVG outline or visual artifact. Confirm Tab focus still produces a visible custom stroke.
 
@@ -44,11 +44,11 @@ Confirm mouse click no longer produces a native SVG outline or visual artifact. 
 - Modify: `js/map.js:20-25,182-201,311-315`
 - Test: local Edge against `http://127.0.0.1:8080/index.html`
 
-- [ ] **Step 1: Confirm the failing state transition**
+- [x] **Step 1: Confirm the failing state transition**
 
 Verify the click handler writes inline `opacity: 0` to `#map-container` before changing `window.location.href`, while no `pageshow` or `pagehide` listener exists.
 
-- [ ] **Step 2: Implement idempotent state restoration**
+- [x] **Step 2: Implement idempotent state restoration**
 
 ```js
 function restoreMapPageState() {
@@ -61,11 +61,11 @@ function restoreMapPageState() {
 
 Call the helper from `pagehide` and from persisted `pageshow`. Do not call `init()` during BFCache restoration.
 
-- [ ] **Step 3: Make click departure deterministic**
+- [x] **Step 3: Make click departure deterministic**
 
 Blur the clicked path, hide the tooltip, lock repeated clicks, and mark the container as leaving before starting the existing fade and navigation.
 
-- [ ] **Step 4: Verify back navigation**
+- [x] **Step 4: Verify back navigation**
 
 Navigate index → province → browser Back. Confirm the map container has computed opacity `1`, contains 34 province paths, and accepts another province click.
 
@@ -75,11 +75,11 @@ Navigate index → province → browser Back. Confirm the map container has comp
 - Verify: `js/map.js`
 - Verify: `css/map.css`
 
-- [ ] **Step 1: Run JavaScript syntax validation**
+- [x] **Step 1: Run JavaScript syntax validation**
 
 Run `node --check js/map.js`. Expected result: exit code 0 with no output.
 
-- [ ] **Step 2: Review the focused diff**
+- [x] **Step 2: Review the focused diff**
 
 Run `git diff --check` and `git diff -- js/map.js css/map.css`. Expected result: no whitespace errors and only the approved lifecycle/focus changes.
 
@@ -88,4 +88,3 @@ Run `git diff --check` and `git diff -- js/map.js css/map.css`. Expected result:
 ```text
 首页地图：修复点击图样与后退后地图隐藏
 ```
-
