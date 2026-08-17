@@ -2,6 +2,16 @@
 
 本文件记录依据《至善百味行网站设计思路书.docx》搭建网站的进度。
 
+## 部署
+
+项目已配置本地 WOFF2 字体、独立 `dist/` 发布目录和 Netlify 构建校验。完整操作见 [Netlify 部署指南](docs/NETLIFY_DEPLOYMENT.md)。
+
+```powershell
+npm run build
+```
+
+`dist/` 是可重复生成的发布成品，已被 Git 忽略，不需要提交到现有 GitHub 仓库；连接 GitHub 后由 Netlify 自动生成，手动部署时则直接拖拽该目录。
+
 ## 已完成（严格遵循设计文档）
 
 ### 第一层 · 首页地图

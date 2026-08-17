@@ -3,6 +3,31 @@
    依据《至善百味行网站设计思路书》2.2 / 2.3 / 2.5 编写
    ============================================================ */
 
+/* ---------- 2.3 本地字体（当前网站字符子集） ---------- */
+@font-face {
+  font-family: "Noto Sans SC";
+  src: url("../assets/fonts/noto-sans-sc-variable-subset.woff2") format("woff2-variations");
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Serif SC";
+  src: url("../assets/fonts/noto-serif-sc-variable-subset.woff2") format("woff2-variations");
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ZCOOL KuaiLe";
+  src: url("../assets/fonts/zcool-kuaile-regular-subset.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
 /* ---------- 2.2 色彩体系（中国传统色谱淡雅色系） ---------- */
 :root {
   --yuebai:    #D6ECF0;   /* 月白：页面背景辅助色 */
