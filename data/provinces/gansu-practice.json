@@ -6,7 +6,6 @@
   "place": "甘肃 · 陇南",
   "intro": "走进陇南武都山间花椒林地，7月正值采摘旺季，漫山红果挂满枝头。",
   "paragraphs": [
-    "走进陇南武都山间花椒林地，7月正值采摘旺季，漫山红果挂满枝头，空气中弥漫着浓郁的麻香。",
     "武都花椒栽培历史已逾两千年，曾为宫廷贡椒，被誉为\"中国花椒之乡\"。",
     "花椒采摘无法用机器替代，只能靠人工一粒粒捻下。椒农每天凌晨5点出发、晚上8点返回。",
     "枝布满尖刺，椒油灼得皮肤刺痛，7月高温达36摄氏度，没多久便大汗淋漓。亲手采摘后真切体会到一把红果承载着一整年的期盼。",
@@ -16,20 +15,28 @@
   ],
   "images": [
     {
-      "src": "gansu/practice/gansu-practice-1.webp",
-      "caption": "陇南实践"
+      "src": "assets/images/provinces/gansu/practice/gansu-practice-1.webp",
+      "caption": "分筛花椒"
     },
     {
-      "src": "gansu/practice/gansu-practice-2.webp",
-      "caption": "陇南实践"
+      "src": "assets/images/provinces/gansu/practice/gansu-practice-2.webp",
+      "caption": "花椒"
     },
     {
-      "src": "gansu/practice/gansu-practice-3.webp",
-      "caption": "陇南实践"
+      "src": "assets/images/provinces/gansu/practice/gansu-practice-3.webp",
+      "caption": "花椒晒干后"
     },
     {
-      "src": "gansu/practice/gansu-practice-4.webp",
-      "caption": "陇南实践"
+      "src": "assets/images/provinces/gansu/practice/gansu-practice-4.webp",
+      "caption": "花椒（1）"
+    },
+    {
+      "src": "assets/images/provinces/gansu/practice/gansu-practice-5.webp",
+      "caption": "远观花椒林"
+    },
+    {
+      "src": "assets/images/provinces/gansu/practice/gansu-practice-6.webp",
+      "caption": "采集花椒"
     }
   ]
 }

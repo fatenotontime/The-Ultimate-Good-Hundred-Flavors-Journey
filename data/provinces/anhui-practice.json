@@ -1,36 +1,47 @@
 {
   "id": "anhui-practice",
   "province": "anhui",
-  "title": "宿州社会实践",
-  "subtitle": "实践组（安徽宿州）",
+  "title": "宿州烟味记",
+  "subtitle": "实践组 · 安徽宿州",
   "place": "安徽 · 宿州",
   "intro": "在宿州，传承不是写在书里的历史，而是每天清晨，灶台上准时升起的那口热气。",
   "paragraphs": [
-    "🥣 它是昭德轩里，滚汤冲开蛋花的那一抹咸香；",
-    "🌯 是谢家早点里，一张薄如蝉翼的烙馍，卷起的一整个美好的清晨。",
-    "🍲 它是农家大灶台前，铁锅炖出的焦香，是饼子“喝”饱了鸡汤的满足；",
-    "🥘 也是那一口粗陶砂锅里，用慢火熬出来的岁月温柔。",
+    "在宿州，传承不是写在书里的历史，而是每天清晨，灶台上准时升起的那口热气。",
+    "它是昭德轩里，滚汤冲开蛋花的那一抹咸香；",
+    "是谢家早点里，一张薄如蝉翼的烙馍，卷起的一整个美好的清晨。",
+    "它是农家大灶台前，铁锅炖出的焦香，是饼子\"喝\"饱了鸡汤的满足；",
+    "也是那一口粗陶砂锅里，用慢火熬出来的岁月温柔。",
     "老味道之所以能活下来，不是因为它们有多古老，而是因为当年轻人学着揉面、调酱，当孩子们第一次咬下烙馍卷菜露出笑脸……",
-    "那些老味道，就在我们的舌尖上，又活了一次✨。",
-    "文化的内核是传承，美食的灵魂是陪伴。",
     "来宿州吧，尝尝这口，穿越时间的烟火气🏮"
   ],
   "images": [
     {
-      "src": "assets/images/provinces/anhui/practice/zhaodexuan.webp",
-      "caption": "昭德轩"
+      "src": "assets/images/provinces/anhui/practice/anhui-practice-1.webp",
+      "caption": "宿州_NR8AVjViQ2dBeE1EazBOekExT1RFeU02QndhdGlSdXpnIQUAcXVuZ3o!"
     },
     {
-      "src": "assets/images/provinces/anhui/practice/xiejia-breakfast.webp",
-      "caption": "谢家早点与黄磊面皮"
+      "src": "assets/images/provinces/anhui/practice/anhui-practice-2.webp",
+      "caption": "宿州_NR8AVjViQ2dBeE1EazBOekExT1RFeU42QndhbExqa2pnIQUAcXVuZ3o!"
     },
     {
-      "src": "assets/images/provinces/anhui/practice/farm-stove.webp",
-      "caption": "农家大灶台"
+      "src": "assets/images/provinces/anhui/practice/anhui-practice-3.webp",
+      "caption": "宿州_NR8AVjViQ2dBeE1EazBOekExT1RFeU5LQndhcUo5cURnIQUAcXVuZ3o!"
     },
     {
-      "src": "assets/images/provinces/anhui/practice/four-dishes.webp",
-      "caption": "四种美食"
+      "src": "assets/images/provinces/anhui/practice/anhui-practice-4.webp",
+      "caption": "宿州_NR8AVjViQ2dBeE1EazBOekExT1RFeU5hQndhb0V4b2pnIQUAcXVuZ3o!"
+    },
+    {
+      "src": "assets/images/provinces/anhui/practice/anhui-practice-5.webp",
+      "caption": "宿州_NR8AVjViQ2dBeE1EazBOekExT1RFeU5xQndhaG5zblRnIQUAcXVuZ3o!"
+    },
+    {
+      "src": "assets/images/provinces/anhui/practice/anhui-practice-6.webp",
+      "caption": "宿州_NR8AVjViQ2dBeE1EazBOekExT1RFeU9LQndhbUZma2pnIQUAcXVuZ3o!"
+    },
+    {
+      "src": "assets/images/provinces/anhui/practice/anhui-practice-7.webp",
+      "caption": "宿州_NR8AVjViQ2dBeE1EazBOekExT1RFeU9hQndhcUkwa2pnIQUAcXVuZ3o!"
     }
   ]
 }

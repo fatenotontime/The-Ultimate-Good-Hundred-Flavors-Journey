@@ -7,23 +7,105 @@
   "intro": "一座城市的文化，不仅镌刻在古老建筑中，也流淌在街头巷尾的一餐一食里。",
   "paragraphs": [
     "我们走进五大道和滨江道，在蒸腾的热气与浓郁的香味中，感受津门饮食文化生生不息的力量。",
-    "📍 调研点一：五大道历史文化旅游区",
     "百年洋楼、幽静街巷与市井小店彼此交融，建筑记录着城市轨迹，街边美食则保存着更鲜活的民间记忆。",
     "一块熟梨糕，一段老天津的童年。过去小贩推车沿街售卖，用独特汽笛声招揽顾客，是几代天津人的童年记忆。",
-    "制作时，大米与糯米按比例混合研磨成粉，装入木甑压实，上锅蒸约一分钟成型。看似简单，背后是摊主对米粉比例、火候的精准把握。",
-    "📍 调研点二：滨江道步行街",
     "老字号店铺与现代商业交汇，是集中展示天津民俗文化与老字号技艺的窗口。",
     "狗不理包子讲究半发面、水打馅，褶纹细密如白菊，凝结着老字号守护信誉的文化精神。",
-    "耳朵眼炸糕黄米江米外皮包豆沙，温油慢炸至金黄酥脆、内里软糯。'糕'谐音'高'，寓意步步高升。",
-    "十八街麻花九转十八扭，酥脆香甜，是广受欢迎的城市伴手礼。",
-    "❤️ 实践感悟",
-    "熟梨糕木甑升起的白汽，煎饼馃子摊前的晨光，炸糕与麻花里的老手艺，都把城市记忆融进了寻常一餐。传统并非橱窗里的旧物，而在一次次制作、品尝和讲述中不断生长。",
+    "耳朵眼炸糕黄米江米外皮包豆沙，温油慢炸至金黄酥脆、内里软糯。\"糕\"谐音\"高\"，寓意步步高升。",
     "一城百味，一味一脉。愿以青年脚步丈量文化，让中华文脉在升腾的烟火气中代代相传。"
   ],
   "images": [
-    { "src": "assets/images/provinces/tianjin/tianjin-practice-1.webp", "caption": "五大道街景" },
-    { "src": "assets/images/provinces/tianjin/tianjin-practice-4.webp", "caption": "街头美食" },
-    { "src": "assets/images/provinces/tianjin/tianjin-practice-8.webp", "caption": "实践调研" },
-    { "src": "assets/images/provinces/tianjin/tianjin-practice-12.webp", "caption": "老字号探访" }
+    {
+      "src": "assets/images/provinces/tianjin/practice/tianjin-practice-1.webp",
+      "caption": "天津_NR8AVjViQ2dBeE1EazBOekExT1RFeTdiSnRhcjJRM1FjIQUAcXVuZ3o!"
+    },
+    {
+      "src": "assets/images/provinces/tianjin/practice/tianjin-practice-2.webp",
+      "caption": "天津_NR8AVjViQ2dBeE1EazBOekExT1RFeVM3QnRhdTZETGgwIQUAcXVuZ3o!"
+    },
+    {
+      "src": "assets/images/provinces/tianjin/practice/tianjin-practice-3.webp",
+      "caption": "天津_NR8AVjViQ2dBeE1EazBOekExT1RFeVNyQnRhcUVET3gwIQUAcXVuZ3o!"
+    },
+    {
+      "src": "assets/images/provinces/tianjin/practice/tianjin-practice-4.webp",
+      "caption": "天津_NR8AVjViQ2dBeE1EazBOekExT1RFeVQ3QnRhdnpMa2h3IQUAcXVuZ3o!"
+    },
+    {
+      "src": "assets/images/provinces/tianjin/practice/tianjin-practice-5.webp",
+      "caption": "天津_NR8AVjViQ2dBeE1EazBOekExT1RFeVRMQnRhbUVvSGgwIQUAcXVuZ3o!"
+    },
+    {
+      "src": "assets/images/provinces/tianjin/practice/tianjin-practice-6.webp",
+      "caption": "天津_NR8AVjViQ2dBeE1EazBOekExT1RFeVRiQnRhZzE2SFIwIQUAcXVuZ3o!"
+    },
+    {
+      "src": "assets/images/provinces/tianjin/practice/tianjin-practice-7.webp",
+      "caption": "天津_NR8AVjViQ2dBeE1EazBOekExT1RFeVRyQnRha1V5SHgwIQUAcXVuZ3o!"
+    },
+    {
+      "src": "assets/images/provinces/tianjin/practice/tianjin-practice-8.webp",
+      "caption": "天津_NR8AVjViQ2dBeE1EazBOekExT1RFeVU3QnRhcTguZWh3IQUAcXVuZ3o!"
+    },
+    {
+      "src": "assets/images/provinces/tianjin/practice/tianjin-practice-9.webp",
+      "caption": "天津_NR8AVjViQ2dBeE1EazBOekExT1RFeVVMQnRhb0xMaXh3IQUAcXVuZ3o!"
+    },
+    {
+      "src": "assets/images/provinces/tianjin/practice/tianjin-practice-10.webp",
+      "caption": "天津_NR8AVjViQ2dBeE1EazBOekExT1RFeVViQnRhdE4wZUJ3IQUAcXVuZ3o!"
+    },
+    {
+      "src": "assets/images/provinces/tianjin/practice/tianjin-practice-11.webp",
+      "caption": "天津_NR8AVjViQ2dBeE1EazBOekExT1RFeVVyQnRhaVlyZ2h3IQUAcXVuZ3o!"
+    },
+    {
+      "src": "assets/images/provinces/tianjin/practice/tianjin-practice-12.webp",
+      "caption": "天津_NR8AVjViQ2dBeE1EazBOekExT1RFeVY3QnRhaVlWU1J3IQUAcXVuZ3o!"
+    },
+    {
+      "src": "assets/images/provinces/tianjin/practice/tianjin-practice-13.webp",
+      "caption": "天津_NR8AVjViQ2dBeE1EazBOekExT1RFeVZMQnRhaFdVVkJ3IQUAcXVuZ3o!"
+    },
+    {
+      "src": "assets/images/provinces/tianjin/practice/tianjin-practice-14.webp",
+      "caption": "天津_NR8AVjViQ2dBeE1EazBOekExT1RFeVZyQnRhanFBS2h3IQUAcXVuZ3o!"
+    },
+    {
+      "src": "assets/images/provinces/tianjin/practice/tianjin-practice-15.webp",
+      "caption": "天津_NR8AVjViQ2dBeE1EazBOekExT1RFeVdMQnRhdjdPTGh3IQUAcXVuZ3o!"
+    },
+    {
+      "src": "assets/images/provinces/tianjin/practice/tianjin-practice-16.webp",
+      "caption": "天津_八珍豆腐"
+    },
+    {
+      "src": "assets/images/provinces/tianjin/practice/tianjin-practice-17.webp",
+      "caption": "天津_十八街麻花"
+    },
+    {
+      "src": "assets/images/provinces/tianjin/practice/tianjin-practice-18.webp",
+      "caption": "天津_煎饼果子"
+    },
+    {
+      "src": "assets/images/provinces/tianjin/practice/tianjin-practice-19.webp",
+      "caption": "天津_熟梨膏"
+    },
+    {
+      "src": "assets/images/provinces/tianjin/practice/tianjin-practice-20.webp",
+      "caption": "天津_狗不理包子"
+    },
+    {
+      "src": "assets/images/provinces/tianjin/practice/tianjin-practice-21.webp",
+      "caption": "天津_王中王刨冰"
+    },
+    {
+      "src": "assets/images/provinces/tianjin/practice/tianjin-practice-22.webp",
+      "caption": "天津_红烧牛窝骨"
+    },
+    {
+      "src": "assets/images/provinces/tianjin/practice/tianjin-practice-23.webp",
+      "caption": "天津_耳朵眼炸糕"
+    }
   ]
 }
