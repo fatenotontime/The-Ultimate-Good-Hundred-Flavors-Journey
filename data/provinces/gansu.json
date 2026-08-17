@@ -6,66 +6,24 @@
   "intro": "武都花椒两千年延续至今，从宫廷贡椒到百姓餐桌，小小红果串联起农耕文化传承与乡村振兴之路。",
   "dishes": [
     {
-      "id": "huajiao-noodles",
-      "name": "花椒面",
-      "subtitle": "中国花椒之乡的灵魂调味",
-      "thumbnail": "assets/images/provinces/gansu/huajiao-noodles-thumb.webp",
+      "id": "huajiao",
+      "name": "武都花椒",
+      "subtitle": "中国花椒之乡的灵魂食材",
+      "thumbnail": "assets/images/provinces/gansu/huajiao-thumb.webp",
       "images": [
-        "assets/images/provinces/gansu/huajiao-noodles-full.webp"
+        "assets/images/provinces/gansu/huajiao-full.webp"
       ],
       "tags": [
         "麻辣",
-        "面食",
-        "调味"
+        "食材",
+        "两千年"
       ],
-      "origin": "甘肃 · 陇南",
-      "description": "武都大红袍花椒——兰州牛肉面的灵魂调味，色红油重、麻香浓郁，一斤可卖到60元。",
+      "origin": "甘肃 · 陇南 · 武都",
+      "description": "武都大红袍花椒栽培历史已逾两千年，曾为宫廷贡椒。色红油重、麻香浓郁，被誉为'中国花椒之乡'。从凌晨山路的星光到烈日下弯腰的背影，小小花椒藏着整个乡村产业的细节。",
       "ingredients": [
-        "面粉",
         "葱",
+        "面粉",
         "猪肉"
-      ]
-    },
-    {
-      "id": "longnan-steamed",
-      "name": "武都搅团",
-      "subtitle": "西北农家的朴素主食",
-      "thumbnail": "assets/images/provinces/gansu/longnan-steamed-thumb.webp",
-      "images": [
-        "assets/images/provinces/gansu/longnan-steamed-full.webp"
-      ],
-      "tags": [
-        "咸香",
-        "农家",
-        "主食"
-      ],
-      "origin": "甘肃 · 陇南",
-      "description": "玉米面或洋芋面搅成糊状，配油泼辣子与酸菜水，是陇南农家最日常的暖心主食。",
-      "ingredients": [
-        "面粉",
-        "鸡蛋",
-        "葱"
-      ]
-    },
-    {
-      "id": "lamb-brisket",
-      "name": "羊肉泡馍",
-      "subtitle": "一碗浓汤暖陇原",
-      "thumbnail": "assets/images/provinces/gansu/lamb-brisket-thumb.webp",
-      "images": [
-        "assets/images/provinces/gansu/lamb-brisket-full.webp"
-      ],
-      "tags": [
-        "鲜香",
-        "汤品",
-        "西北"
-      ],
-      "origin": "甘肃 · 陇南",
-      "description": "西北冬日标配——浓郁羊汤配手掰馍，热气腾腾，一碗下肚驱散山间的寒气。",
-      "ingredients": [
-        "绵羊肉",
-        "面粉",
-        "葱"
       ]
     }
   ]

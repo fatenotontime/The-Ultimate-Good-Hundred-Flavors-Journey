@@ -10,63 +10,22 @@
       "name": "烧麦",
       "subtitle": "一笼捎卖里的走西口往事",
       "thumbnail": "assets/images/provinces/neimenggu/shaomai-thumb.webp",
-      "images": [
-        "assets/images/provinces/neimenggu/shaomai-full.webp"
-      ],
-      "tags": [
-        "咸鲜",
-        "蒸食",
-        "传统"
-      ],
+      "images": ["assets/images/provinces/neimenggu/shaomai-full.webp"],
+      "tags": ["咸鲜", "蒸食", "传统"],
       "origin": "内蒙古 · 包头",
       "description": "一两烧麦是指一两皮！薄如荷叶的面皮包上等绵羊肉馅，急火蒸七八分钟，出笼时穗朝上，像将开未开的花。",
-      "ingredients": [
-        "面粉",
-        "绵羊肉",
-        "葱"
-      ]
+      "ingredients": ["面粉", "绵羊肉", "葱"]
     },
     {
       "id": "chatang",
       "name": "茶汤",
       "subtitle": "龙嘴铜壶冲出的塞外甜润",
       "thumbnail": "assets/images/provinces/neimenggu/chatang-thumb.webp",
-      "images": [
-        "assets/images/provinces/neimenggu/chatang-full.webp"
-      ],
-      "tags": [
-        "甜润",
-        "小吃",
-        "非遗"
-      ],
+      "images": ["assets/images/provinces/neimenggu/chatang-full.webp"],
+      "tags": ["甜润", "小吃", "非遗"],
       "origin": "内蒙古 · 包头",
       "description": "既没茶也没汤，只因冲制工艺似沏茶。龙嘴大铜壶一倾，沸水如线注入碗中，小米面变成杏黄米羹。",
-      "ingredients": [
-        "糯米",
-        "红枣",
-        "面粉"
-      ]
-    },
-    {
-      "id": "lamb-stew",
-      "name": "手把肉",
-      "subtitle": "草原上的豪迈原味",
-      "thumbnail": "assets/images/provinces/neimenggu/lamb-stew-thumb.webp",
-      "images": [
-        "assets/images/provinces/neimenggu/lamb-stew-full.webp"
-      ],
-      "tags": [
-        "鲜香",
-        "炖煮",
-        "草原"
-      ],
-      "origin": "内蒙古 · 包头",
-      "description": "草原上最本真的食肉方式——大块带骨羊肉入锅白煮，蘸蒜醋食之，鲜嫩多汁，尽显蒙古族豪迈本色。",
-      "ingredients": [
-        "绵羊肉",
-        "葱",
-        "面粉"
-      ]
+      "ingredients": ["糯米", "红枣", "面粉"]
     }
   ]
 }

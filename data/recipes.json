@@ -57,13 +57,6 @@
       "link": "detail.html?province=neimenggu&dish=chatang"
     },
     {
-      "id": "lamb-stew", "name": "手把肉", "subtitle": "草原上的豪迈原味",
-      "utensil": "claypot", "utensilName": "砂锅",
-      "ingredients": ["绵羊肉", "葱", "面粉"],
-      "thumbnail": "assets/images/provinces/neimenggu/lamb-stew-thumb.webp",
-      "link": "detail.html?province=neimenggu&dish=lamb-stew"
-    },
-    {
       "id": "gaotuan", "name": "阿芳糕团", "subtitle": "西山非遗糕点九十年传承",
       "utensil": "steamer", "utensilName": "蒸屉",
       "ingredients": ["糯米", "面粉", "红枣"],
@@ -85,25 +78,11 @@
       "link": "detail.html?province=jiangsu&dish=songshu-guiyu"
     },
     {
-      "id": "huajiao-noodles", "name": "花椒面", "subtitle": "中国花椒之乡的灵魂调味",
+      "id": "huajiao", "name": "武都花椒", "subtitle": "中国花椒之乡的灵魂食材",
       "utensil": "wok", "utensilName": "铁锅",
-      "ingredients": ["面粉", "葱", "猪肉"],
-      "thumbnail": "assets/images/provinces/gansu/huajiao-noodles-thumb.webp",
-      "link": "detail.html?province=gansu&dish=huajiao-noodles"
-    },
-    {
-      "id": "longnan-jiaotuan", "name": "武都搅团", "subtitle": "西北农家的朴素主食",
-      "utensil": "steamer", "utensilName": "蒸屉",
-      "ingredients": ["面粉", "鸡蛋", "葱"],
-      "thumbnail": "assets/images/provinces/gansu/longnan-jiaotuan-thumb.webp",
-      "link": "detail.html?province=gansu&dish=longnan-jiaotuan"
-    },
-    {
-      "id": "yangrou-paomo", "name": "羊肉泡馍", "subtitle": "一碗浓汤暖陇原",
-      "utensil": "claypot", "utensilName": "砂锅",
-      "ingredients": ["绵羊肉", "面粉", "葱"],
-      "thumbnail": "assets/images/provinces/gansu/yangrou-paomo-thumb.webp",
-      "link": "detail.html?province=gansu&dish=yangrou-paomo"
+      "ingredients": ["葱", "面粉", "猪肉"],
+      "thumbnail": "assets/images/provinces/gansu/huajiao-thumb.webp",
+      "link": "detail.html?province=gansu&dish=huajiao"
     },
     {
       "id": "xiangsu-ji", "name": "金牌香酥鸡", "subtitle": "山东省级非遗菜品",
