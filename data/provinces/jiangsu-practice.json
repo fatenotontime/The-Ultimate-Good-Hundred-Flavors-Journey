@@ -1,0 +1,35 @@
+{
+  "id": "jiangsu-practice",
+  "province": "jiangsu",
+  "title": "姑苏寻味录",
+  "subtitle": "实践组 · 苏州",
+  "place": "江苏 · 苏州",
+  "intro": "此次苏州非遗美食调研，让我真切感受到江南饮食文化的厚重。",
+  "paragraphs": [
+    "苏州西山岛的阿芳糕团，是吴中区非物质文化遗产保护单位，这项手艺在传承人家中已传承九十余年。",
+    "店铺恪守江南\"不时不食\"的饮食理念，顺应四季推出限定糕点：春日青团、夏日绿豆冰糕、秋日松糕酥点、冬日年糕八宝饭。",
+    "十全街地处姑苏古城，保留\"水陆并行、河街相邻\"的经典水乡风貌。",
+    "馋佬沛油墩子是江南老牌小吃，外皮酥脆、内里软糯，是地道的老苏州味道。",
+    "百年老店万泰兴的苏式面极具时令特色，夏季枫镇大肉面清甜鲜香，三虾面鲜味层次丰富。",
+    "松鼠桂鱼造型精巧，炸后形似松鼠，淋汁作响，历史底蕴深厚，位列江苏十大经典名菜。",
+    "此次苏州非遗美食调研，让我真切感受到江南饮食文化的厚重。非遗从不局限于展厅，而是扎根市井烟火、代代革新延续生命力。"
+  ],
+  "images": [
+    {
+      "src": "jiangsu/practice/jiangsu-practice-1.webp",
+      "caption": "苏州实践"
+    },
+    {
+      "src": "jiangsu/practice/jiangsu-practice-2.webp",
+      "caption": "苏州实践"
+    },
+    {
+      "src": "jiangsu/practice/jiangsu-practice-3.webp",
+      "caption": "苏州实践"
+    },
+    {
+      "src": "jiangsu/practice/jiangsu-practice-4.webp",
+      "caption": "苏州实践"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "id": "shandong",
+  "name": "山东",
+  "shortName": "鲁",
+  "banner": "assets/images/provinces/shandong/banner.webp",
+  "intro": "百年鲁菜春和楼、王哥庄大馒头古法技艺——青岛饮食非遗里藏着城市记忆与匠心传承。",
+  "dishes": [
+    {
+      "id": "xiangsu-ji",
+      "name": "金牌香酥鸡",
+      "subtitle": "山东省级非遗菜品",
+      "thumbnail": "assets/images/provinces/shandong/xiangsu-ji-thumb.webp",
+      "images": [
+        "assets/images/provinces/shandong/xiangsu-ji-full.webp"
+      ],
+      "tags": [
+        "酥脆",
+        "经典",
+        "鲁菜"
+      ],
+      "origin": "山东 · 青岛",
+      "description": "民国名厨创制，七代厨师匠心传承。嫩鸡腌制、蒸制、油炸，外皮酥脆、肉质软烂入味，地道鲁菜经典。",
+      "ingredients": [
+        "鸡肉",
+        "面粉",
+        "鸡蛋"
+      ]
+    },
+    {
+      "id": "mantou",
+      "name": "王哥庄大馒头",
+      "subtitle": "五百年的非遗古法",
+      "thumbnail": "assets/images/provinces/shandong/mantou-thumb.webp",
+      "images": [
+        "assets/images/provinces/shandong/mantou-full.webp"
+      ],
+      "tags": [
+        "面食",
+        "非遗",
+        "古法"
+      ],
+      "origin": "山东 · 青岛",
+      "description": "五百余年历史，曾为古代贡品。老面发酵、手工揉制、柴火铁锅蒸制，焦香锅巴是最大特色。",
+      "ingredients": [
+        "面粉",
+        "鸡蛋",
+        "糯米"
+      ]
+    },
+    {
+      "id": "yuer-sanbai",
+      "name": "二月二杂粮粥",
+      "subtitle": "农家灶台的朴实温暖",
+      "thumbnail": "assets/images/provinces/shandong/yuer-sanbai-thumb.webp",
+      "images": [
+        "assets/images/provinces/shandong/yuer-sanbai-full.webp"
+      ],
+      "tags": [
+        "清淡",
+        "时令",
+        "农家"
+      ],
+      "origin": "山东 · 青岛",
+      "description": "二月二农场的时令杂粮粥，用崂山泉水与本地谷物慢火熬制，朴实温暖，尽显胶东农家本味。",
+      "ingredients": [
+        "糯米",
+        "红枣",
+        "葱"
+      ]
+    }
+  ]
+}
