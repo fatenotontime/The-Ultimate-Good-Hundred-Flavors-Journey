@@ -63,8 +63,7 @@
       "utensilName": "蒸屉",
       "ingredients": [
         "面粉",
-        "猪肉",
-        "鸡蛋"
+        "猪肉"
       ],
       "thumbnail": "assets/images/provinces/tianjin/goubuli-thumb.webp",
       "link": "detail.html?province=tianjin&dish=goubulibaozi"
@@ -243,7 +242,6 @@
       "utensilName": "铁锅",
       "ingredients": [
         "牛肉",
-        "葱",
         "面粉"
       ],
       "thumbnail": "assets/images/provinces/tianjin/hongshaogu-thumb.webp",

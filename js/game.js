@@ -450,13 +450,15 @@
     const matched = checkRecipe(id);
 
     if (matched) {
-      /* 匹配成功 → 弹出菜品详情，并清空该器具食材 */
-      showDishDetail(matched);
+      /* 匹配成功 → 弹出菜品详情，清空该器具食材
+         注意：clearStationItems 在弹窗动画之前执行，
+         确保槽位立即清空（不等弹窗动画完成） */
       clearStationItems(id);
+      showDishDetail(matched);
     } else {
       /* 不匹配 → 提示并清空该器具食材 */
-      showHint(`${cfg.name}里的食材搭不成菜，重新来过～`, 'info');
       clearStationItems(id);
+      showHint(`${cfg.name}里的食材搭不成菜，重新来过～`, 'info');
     }
   }
 
@@ -547,7 +549,7 @@
     overlay.innerHTML = `
       <div class="recipe-book">
         <button class="recipe-book__close" type="button" aria-label="关闭">×</button>
-        <h2 class="recipe-book__title">皖菜配方表</h2>
+        <h2 class="recipe-book__title">至善食单</h2>
         <div class="recipe-book__list">
           ${recipes.map(r => `
             <div class="recipe-book__item" data-utensil="${esc(r.utensil)}">
