@@ -10,63 +10,33 @@
       "name": "阿芳糕团",
       "subtitle": "西山非遗糕点九十年传承",
       "thumbnail": "assets/images/provinces/jiangsu/gaotuan-thumb.webp",
-      "images": [
-        "assets/images/provinces/jiangsu/gaotuan-full.webp"
-      ],
-      "tags": [
-        "糯米",
-        "非遗",
-        "时令"
-      ],
+      "images": ["assets/images/provinces/jiangsu/gaotuan-full.webp"],
+      "tags": ["糯米", "非遗", "时令"],
       "origin": "江苏 · 苏州",
       "description": "吴中区非遗保护单位，九十年传承古法配方。顺应四季推出限定糕点，将四时风物揉进糕团之中。",
-      "ingredients": [
-        "糯米",
-        "面粉",
-        "红枣"
-      ]
+      "ingredients": ["糯米", "面粉", "红枣"]
     },
     {
       "id": "youdunzi",
       "name": "馋佬沛油墩子",
       "subtitle": "江南老牌街头小吃",
       "thumbnail": "assets/images/provinces/jiangsu/youdunzi-thumb.webp",
-      "images": [
-        "assets/images/provinces/jiangsu/youdunzi-full.webp"
-      ],
-      "tags": [
-        "酥脆",
-        "传统",
-        "江南"
-      ],
+      "images": ["assets/images/provinces/jiangsu/youdunzi-full.webp"],
+      "tags": ["酥脆", "传统", "江南"],
       "origin": "江苏 · 苏州 · 十全街",
       "description": "江南老牌小吃，相传因乾隆南巡典故得名，外皮酥脆、内里软糯，是地道的老苏州味道。",
-      "ingredients": [
-        "面粉",
-        "鸡蛋",
-        "猪肉"
-      ]
+      "ingredients": ["面粉", "鸡蛋", "猪肉"]
     },
     {
-      "id": "songshu-guiyu",
-      "name": "松鼠桂鱼",
-      "subtitle": "千年古街的江苏十大名菜",
-      "thumbnail": "assets/images/provinces/jiangsu/songshu-guiyu-thumb.webp",
-      "images": [
-        "assets/images/provinces/jiangsu/songshu-guiyu-full.webp"
-      ],
-      "tags": [
-        "酥脆",
-        "经典",
-        "造型"
-      ],
-      "origin": "江苏 · 苏州 · 山塘街",
-      "description": "造型精巧似松鼠，炸后淋汁作响，历史底蕴深厚，位列江苏十大经典名菜。",
-      "ingredients": [
-        "鸡肉",
-        "鸡蛋",
-        "葱"
-      ]
+      "id": "xiekehuang",
+      "name": "蟹壳黄",
+      "subtitle": "苏州街头的酥脆烧饼",
+      "thumbnail": "assets/images/provinces/jiangsu/xiekehuang-thumb.webp",
+      "images": ["assets/images/provinces/jiangsu/xiekehuang-full.webp"],
+      "tags": ["酥脆", "烧饼", "点心"],
+      "origin": "江苏 · 苏州 · 十全街",
+      "description": "形如蟹壳、色如蟹黄的传统烧饼，面粉制皮、猪肉做馅，贴炉烤至金黄酥脆，是苏州老街坊最爱的早点之一。",
+      "ingredients": ["面粉", "猪肉", "鸡蛋"]
     }
   ]
 }

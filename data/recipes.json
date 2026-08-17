@@ -17,7 +17,7 @@
     {
       "id": "danhuatang", "name": "蛋花汤", "subtitle": "一撮葱花，一勺清汤",
       "utensil": "claypot", "utensilName": "砂锅",
-      "ingredients": ["鸡蛋", "葱", "红枣"],
+      "ingredients": ["鸡蛋", "葱", "大米"],
       "thumbnail": "assets/images/provinces/anhui/danhuatang-thumb.webp",
       "link": "detail.html?province=anhui&dish=danhuatang"
     },
@@ -71,18 +71,11 @@
       "link": "detail.html?province=jiangsu&dish=youdunzi"
     },
     {
-      "id": "songshu-guiyu", "name": "松鼠桂鱼", "subtitle": "千年古街的江苏十大名菜",
+      "id": "xiekehuang", "name": "蟹壳黄", "subtitle": "苏州街头的酥脆烧饼",
       "utensil": "wok", "utensilName": "铁锅",
-      "ingredients": ["鸡肉", "鸡蛋", "葱"],
-      "thumbnail": "assets/images/provinces/jiangsu/songshu-guiyu-thumb.webp",
-      "link": "detail.html?province=jiangsu&dish=songshu-guiyu"
-    },
-    {
-      "id": "huajiao", "name": "武都花椒", "subtitle": "中国花椒之乡的灵魂食材",
-      "utensil": "wok", "utensilName": "铁锅",
-      "ingredients": ["葱", "面粉", "猪肉"],
-      "thumbnail": "assets/images/provinces/gansu/huajiao-thumb.webp",
-      "link": "detail.html?province=gansu&dish=huajiao"
+      "ingredients": ["面粉", "猪肉", "鸡蛋"],
+      "thumbnail": "assets/images/provinces/jiangsu/xiekehuang-thumb.webp",
+      "link": "detail.html?province=jiangsu&dish=xiekehuang"
     },
     {
       "id": "xiangsu-ji", "name": "金牌香酥鸡", "subtitle": "山东省级非遗菜品",
@@ -101,7 +94,7 @@
     {
       "id": "er-yue-er-zhou", "name": "二月二杂粮粥", "subtitle": "农家灶台的朴实温暖",
       "utensil": "claypot", "utensilName": "砂锅",
-      "ingredients": ["糯米", "红枣", "葱"],
+      "ingredients": ["糯米", "红枣", "大米"],
       "thumbnail": "assets/images/provinces/shandong/er-yue-er-zhou-thumb.webp",
       "link": "detail.html?province=shandong&dish=er-yue-er-zhou"
     }

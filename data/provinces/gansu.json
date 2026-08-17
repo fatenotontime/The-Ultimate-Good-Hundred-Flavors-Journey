@@ -10,21 +10,10 @@
       "name": "武都花椒",
       "subtitle": "中国花椒之乡的灵魂食材",
       "thumbnail": "assets/images/provinces/gansu/huajiao-thumb.webp",
-      "images": [
-        "assets/images/provinces/gansu/huajiao-full.webp"
-      ],
-      "tags": [
-        "麻辣",
-        "食材",
-        "两千年"
-      ],
+      "images": ["assets/images/provinces/gansu/huajiao-full.webp"],
+      "tags": ["麻辣", "食材", "两千年"],
       "origin": "甘肃 · 陇南 · 武都",
-      "description": "武都大红袍花椒栽培历史已逾两千年，曾为宫廷贡椒。色红油重、麻香浓郁，被誉为'中国花椒之乡'。从凌晨山路的星光到烈日下弯腰的背影，小小花椒藏着整个乡村产业的细节。",
-      "ingredients": [
-        "葱",
-        "面粉",
-        "猪肉"
-      ]
+      "description": "武都大红袍花椒栽培历史已逾两千年，曾为宫廷贡椒。色红油重、麻香浓郁，被誉为'中国花椒之乡'。从凌晨山路的星光到烈日下弯腰的背影，小小花椒藏着整个乡村产业的细节。"
     }
   ]
 }
