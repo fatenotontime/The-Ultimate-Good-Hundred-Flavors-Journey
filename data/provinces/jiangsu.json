@@ -48,23 +48,23 @@
       ]
     },
     {
-      "id": "xiekehuang",
-      "name": "蟹壳黄",
-      "subtitle": "苏州街头的酥脆烧饼",
-      "thumbnail": "assets/images/provinces/jiangsu/xiekehuang-thumb.webp",
+      "id": "songshu-guiyu",
+      "name": "松鼠桂鱼",
+      "subtitle": "千年古街的江苏十大名菜",
+      "thumbnail": "assets/images/provinces/jiangsu/songshu-guiyu-thumb.webp",
       "images": [
-        "assets/images/provinces/jiangsu/xiekehuang-full.webp"
+        "assets/images/provinces/jiangsu/songshu-guiyu-full.webp"
       ],
       "tags": [
         "酥脆",
-        "烧饼",
-        "点心"
+        "经典",
+        "造型"
       ],
-      "origin": "江苏 · 苏州 · 十全街",
-      "description": "形如蟹壳、色如蟹黄的传统烧饼，面粉制皮、猪肉做馅，贴炉烤至金黄酥脆，是苏州老街坊最爱的早点之一。",
+      "origin": "江苏 · 苏州 · 山塘街",
+      "description": "造型精巧似松鼠，炸后淋汁作响，历史底蕴深厚，位列江苏十大经典名菜。",
       "ingredients": [
         "面粉",
-        "猪肉",
+        "鱼肉",
         "鸡蛋"
       ]
     }

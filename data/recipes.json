@@ -140,9 +140,9 @@
       "link": "detail.html?province=jiangsu&dish=youdunzi"
     },
     {
-      "id": "xiekehuang",
-      "name": "蟹壳黄",
-      "subtitle": "苏州街头的酥脆烧饼",
+      "id": "songshu-guiyu",
+      "name": "松鼠桂鱼",
+      "subtitle": "千年古街的江苏十大名菜",
       "utensil": "wok",
       "utensilName": "铁锅",
       "ingredients": [
@@ -150,8 +150,8 @@
         "鱼肉",
         "鸡蛋"
       ],
-      "thumbnail": "assets/images/provinces/jiangsu/xiekehuang-thumb.webp",
-      "link": "detail.html?province=jiangsu&dish=xiekehuang"
+      "thumbnail": "assets/images/provinces/jiangsu/songshu-guiyu-thumb.webp",
+      "link": "detail.html?province=jiangsu&dish=songshu-guiyu"
     },
     {
       "id": "xiangsu-ji",
