@@ -30,6 +30,7 @@
     { name: '鸡肉',   icon: 'chicken' },
     { name: '猪肉',   icon: 'pork' },
     { name: '绵羊肉', icon: 'lamb' },
+    { name: '牛肉',   icon: 'beef' },
     { name: '鸡蛋',   icon: 'egg' },
     { name: '面粉',   icon: 'flour' },
     { name: '糯米',   icon: 'glutinous-rice' },
