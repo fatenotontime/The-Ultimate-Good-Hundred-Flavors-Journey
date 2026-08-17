@@ -17,83 +17,43 @@
   "images": [
     {
       "src": "assets/images/provinces/tianjin/practice/tianjin-practice-1.webp",
-      "caption": "天津_NR8AVjViQ2dBeE1EazBOekExT1RFeTdiSnRhcjJRM1FjIQUAcXVuZ3o!"
+      "caption": "刨冰"
     },
     {
       "src": "assets/images/provinces/tianjin/practice/tianjin-practice-2.webp",
-      "caption": "天津_NR8AVjViQ2dBeE1EazBOekExT1RFeVM3QnRhdTZETGgwIQUAcXVuZ3o!"
-    },
-    {
-      "src": "assets/images/provinces/tianjin/practice/tianjin-practice-3.webp",
-      "caption": "天津_NR8AVjViQ2dBeE1EazBOekExT1RFeVNyQnRhcUVET3gwIQUAcXVuZ3o!"
-    },
-    {
-      "src": "assets/images/provinces/tianjin/practice/tianjin-practice-4.webp",
-      "caption": "天津_NR8AVjViQ2dBeE1EazBOekExT1RFeVQ3QnRhdnpMa2h3IQUAcXVuZ3o!"
-    },
-    {
-      "src": "assets/images/provinces/tianjin/practice/tianjin-practice-5.webp",
-      "caption": "天津_NR8AVjViQ2dBeE1EazBOekExT1RFeVRMQnRhbUVvSGgwIQUAcXVuZ3o!"
-    },
-    {
-      "src": "assets/images/provinces/tianjin/practice/tianjin-practice-6.webp",
-      "caption": "天津_NR8AVjViQ2dBeE1EazBOekExT1RFeVRiQnRhZzE2SFIwIQUAcXVuZ3o!"
-    },
-    {
-      "src": "assets/images/provinces/tianjin/practice/tianjin-practice-7.webp",
-      "caption": "天津_NR8AVjViQ2dBeE1EazBOekExT1RFeVRyQnRha1V5SHgwIQUAcXVuZ3o!"
-    },
-    {
-      "src": "assets/images/provinces/tianjin/practice/tianjin-practice-8.webp",
-      "caption": "天津_NR8AVjViQ2dBeE1EazBOekExT1RFeVU3QnRhcTguZWh3IQUAcXVuZ3o!"
-    },
-    {
-      "src": "assets/images/provinces/tianjin/practice/tianjin-practice-9.webp",
-      "caption": "天津_NR8AVjViQ2dBeE1EazBOekExT1RFeVVMQnRhb0xMaXh3IQUAcXVuZ3o!"
-    },
-    {
-      "src": "assets/images/provinces/tianjin/practice/tianjin-practice-10.webp",
-      "caption": "天津_NR8AVjViQ2dBeE1EazBOekExT1RFeVViQnRhdE4wZUJ3IQUAcXVuZ3o!"
-    },
-    {
-      "src": "assets/images/provinces/tianjin/practice/tianjin-practice-11.webp",
-      "caption": "天津_NR8AVjViQ2dBeE1EazBOekExT1RFeVVyQnRhaVlyZ2h3IQUAcXVuZ3o!"
-    },
-    {
-      "src": "assets/images/provinces/tianjin/practice/tianjin-practice-12.webp",
-      "caption": "天津_NR8AVjViQ2dBeE1EazBOekExT1RFeVY3QnRhaVlWU1J3IQUAcXVuZ3o!"
-    },
-    {
-      "src": "assets/images/provinces/tianjin/practice/tianjin-practice-13.webp",
-      "caption": "天津_NR8AVjViQ2dBeE1EazBOekExT1RFeVZMQnRhaFdVVkJ3IQUAcXVuZ3o!"
-    },
-    {
-      "src": "assets/images/provinces/tianjin/practice/tianjin-practice-14.webp",
-      "caption": "天津_NR8AVjViQ2dBeE1EazBOekExT1RFeVZyQnRhanFBS2h3IQUAcXVuZ3o!"
-    },
-    {
-      "src": "assets/images/provinces/tianjin/practice/tianjin-practice-15.webp",
       "caption": "天津_NR8AVjViQ2dBeE1EazBOekExT1RFeVdMQnRhdjdPTGh3IQUAcXVuZ3o!"
     },
     {
-      "src": "assets/images/provinces/tianjin/practice/tianjin-practice-16.webp",
+      "src": "assets/images/provinces/tianjin/practice/tianjin-practice-3.webp",
       "caption": "天津_八珍豆腐"
     },
     {
-      "src": "assets/images/provinces/tianjin/practice/tianjin-practice-17.webp",
+      "src": "assets/images/provinces/tianjin/practice/tianjin-practice-4.webp",
       "caption": "天津_十八街麻花"
     },
     {
-      "src": "assets/images/provinces/tianjin/practice/tianjin-practice-18.webp",
+      "src": "assets/images/provinces/tianjin/practice/tianjin-practice-5.webp",
       "caption": "天津_熟梨膏"
     },
     {
-      "src": "assets/images/provinces/tianjin/practice/tianjin-practice-19.webp",
+      "src": "assets/images/provinces/tianjin/practice/tianjin-practice-6.webp",
       "caption": "天津_王中王刨冰"
     },
     {
-      "src": "assets/images/provinces/tianjin/practice/tianjin-practice-20.webp",
+      "src": "assets/images/provinces/tianjin/practice/tianjin-practice-7.webp",
       "caption": "天津_红烧牛窝骨"
+    },
+    {
+      "src": "assets/images/provinces/tianjin/practice/tianjin-practice-8.webp",
+      "caption": "熟梨糕"
+    },
+    {
+      "src": "assets/images/provinces/tianjin/practice/tianjin-practice-9.webp",
+      "caption": "狗不理包子"
+    },
+    {
+      "src": "assets/images/provinces/tianjin/practice/tianjin-practice-10.webp",
+      "caption": "美食地图"
     }
   ]
 }

@@ -17,7 +17,7 @@
     {
       "id": "danhuatang", "name": "蛋花汤", "subtitle": "一撮葱花，一勺清汤",
       "utensil": "claypot", "utensilName": "砂锅",
-      "ingredients": ["鸡蛋", "葱", "大米"],
+      "ingredients": ["鸡蛋", "葱"],
       "thumbnail": "assets/images/provinces/anhui/danhuatang-thumb.webp",
       "link": "detail.html?province=anhui&dish=danhuatang"
     },

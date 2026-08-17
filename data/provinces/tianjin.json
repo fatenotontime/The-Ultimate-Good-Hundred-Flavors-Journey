@@ -9,34 +9,64 @@
       "id": "jianbing-guozi",
       "name": "煎饼果子",
       "subtitle": "津门晨光第一味",
-      "thumbnail": "assets/images/provinces/tianjin/jianbing-thumb.webp",
-      "images": ["assets/images/provinces/tianjin/jianbing-full.webp"],
-      "tags": ["咸香", "早餐", "街头"],
+      "thumbnail": "assets/images/provinces/tianjin/jianbing-guozi-thumb.webp",
+      "images": [
+        "assets/images/provinces/tianjin/jianbing-guozi-full.webp"
+      ],
+      "tags": [
+        "咸香",
+        "早餐",
+        "街头"
+      ],
       "origin": "天津 · 五大道",
       "description": "绿豆面糊摊薄饼，打鸡蛋，抹面酱腐乳辣椒酱，卷入馃子。一口咬下，面皮软韧、鸡蛋香、馃子脆，天津清晨最具代表性的烟火味。",
-      "ingredients": ["面粉", "鸡蛋", "猪肉"]
+      "ingredients": [
+        "面粉",
+        "鸡蛋",
+        "猪肉"
+      ]
     },
     {
       "id": "goubulibaozi",
       "name": "狗不理包子",
       "subtitle": "十八个褶的百年信誉",
-      "thumbnail": "assets/images/provinces/tianjin/goubuli-thumb.webp",
-      "images": ["assets/images/provinces/tianjin/goubuli-full.webp"],
-      "tags": ["鲜香", "老字号", "蒸食"],
+      "thumbnail": "assets/images/provinces/tianjin/goubulibaozi-thumb.webp",
+      "images": [
+        "assets/images/provinces/tianjin/goubulibaozi-full.webp"
+      ],
+      "tags": [
+        "鲜香",
+        "老字号",
+        "蒸食"
+      ],
       "origin": "天津 · 滨江道",
       "description": "道光年间创始人高贵友忙于做包子无暇招呼，被戏称'狗子卖包子——不理人'。讲究半发面、水打馅，褶纹细密如白菊，凝结着老字号守护信誉的文化精神。",
-      "ingredients": ["面粉", "猪肉", "鸡蛋"]
+      "ingredients": [
+        "面粉",
+        "猪肉",
+        "鸡蛋"
+      ]
     },
     {
       "id": "erduoyan-zhagao",
       "name": "耳朵眼炸糕",
       "subtitle": "胡同口的百年酥脆",
-      "thumbnail": "assets/images/provinces/tianjin/erduoyan-thumb.webp",
-      "images": ["assets/images/provinces/tianjin/erduoyan-full.webp"],
-      "tags": ["酥脆", "甜食", "油炸"],
+      "thumbnail": "assets/images/provinces/tianjin/erduoyan-zhagao-thumb.webp",
+      "images": [
+        "assets/images/provinces/tianjin/erduoyan-zhagao-full.webp"
+      ],
+      "tags": [
+        "酥脆",
+        "甜食",
+        "油炸"
+      ],
       "origin": "天津 · 滨江道",
       "description": "因店铺临近耳朵眼胡同得名。黄米江米外皮包豆沙，温油慢炸至金黄酥脆、内里软糯。'糕'谐音'高'，寓意步步高升。",
-      "ingredients": ["糯米", "面粉", "红枣"]
+      "ingredients": [
+        "糯米",
+        "面粉",
+        "红枣"
+      ]
     }
   ]
 }

@@ -10,33 +10,67 @@
       "name": "地锅鸡配锅贴",
       "subtitle": "一锅两吃，饼借菜味",
       "thumbnail": "assets/images/provinces/anhui/diguoji-thumb.webp",
-      "images": ["assets/images/provinces/anhui/diguoji-full.webp"],
-      "tags": ["咸鲜", "炖菜", "农家"],
+      "images": [
+        "assets/images/provinces/anhui/diguoji-full.webp"
+      ],
+      "tags": [
+        "咸鲜",
+        "炖菜",
+        "农家"
+      ],
       "origin": "安徽 · 皖北",
       "description": "铁锅炖鸡，锅边贴一圈面饼。鸡块炖至酥烂，汤汁浓稠，锅贴一面焦脆一面浸满肉汁，一锅两吃，是皖北人家冬日里的暖心菜。",
-      "ingredients": ["鸡肉", "面粉", "青椒", "葱", "姜"]
+      "ingredients": [
+        "鸡肉",
+        "面粉",
+        "青椒",
+        "葱",
+        "姜"
+      ]
     },
     {
       "id": "jianjiao-baodan",
       "name": "煎饺抱蛋",
       "subtitle": "金黄蛋衣，酥脆煎饺",
       "thumbnail": "assets/images/provinces/anhui/jianjiao-baodan-thumb.webp",
-      "images": ["assets/images/provinces/anhui/jianjiao-baodan-full.webp"],
-      "tags": ["香脆", "家常", "下饭"],
+      "images": [
+        "assets/images/provinces/anhui/jianjiao-baodan-full.webp"
+      ],
+      "tags": [
+        "香脆",
+        "家常",
+        "下饭"
+      ],
       "origin": "安徽 · 皖南",
       "description": "平底锅中码放煎饺，中火煎至底部金黄酥脆，打入鸡蛋液覆盖，半熟时撒葱花。蛋香裹住饺香，酥脆与嫩滑同盘，是皖南街头小摊的经典一味。",
-      "ingredients": ["饺子", "鸡蛋", "葱", "油"]
+      "ingredients": [
+        "饺子",
+        "鸡蛋",
+        "葱",
+        "油"
+      ]
     },
     {
       "id": "danhuatang",
       "name": "蛋花汤",
       "subtitle": "一撮葱花，一勺清汤",
       "thumbnail": "assets/images/provinces/anhui/danhuatang-thumb.webp",
-      "images": ["assets/images/provinces/anhui/danhuatang-full.webp"],
-      "tags": ["清淡", "汤品", "暖胃"],
+      "images": [
+        "assets/images/provinces/anhui/danhuatang-full.webp"
+      ],
+      "tags": [
+        "清淡",
+        "汤品",
+        "暖胃"
+      ],
       "origin": "安徽 · 家常",
       "description": "蛋液入滚汤，瞬间凝成云絮般的蛋花，撒一把葱花，淋几滴香油。简单一碗，暖胃暖心，是徽州人家饭桌上的温柔收尾。",
-      "ingredients": ["鸡蛋", "葱花", "香油", "盐"]
+      "ingredients": [
+        "鸡蛋",
+        "葱花",
+        "香油",
+        "盐"
+      ]
     }
   ]
 }
