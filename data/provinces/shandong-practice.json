@@ -17,27 +17,27 @@
   "images": [
     {
       "src": "assets/images/provinces/shandong/practice/shandong-practice-1.webp",
-      "caption": "二月二手工馒头"
-    },
-    {
-      "src": "assets/images/provinces/shandong/practice/shandong-practice-2.webp",
-      "caption": "手工馒头制作"
-    },
-    {
-      "src": "assets/images/provinces/shandong/practice/shandong-practice-3.webp",
       "caption": "春和楼"
     },
     {
-      "src": "assets/images/provinces/shandong/practice/shandong-practice-4.webp",
+      "src": "assets/images/provinces/shandong/practice/shandong-practice-2.webp",
       "caption": "春和楼的一餐"
     },
     {
-      "src": "assets/images/provinces/shandong/practice/shandong-practice-5.webp",
+      "src": "assets/images/provinces/shandong/practice/shandong-practice-3.webp",
+      "caption": "金牌香酥鸡"
+    },
+    {
+      "src": "assets/images/provinces/shandong/practice/shandong-practice-4.webp",
       "caption": "王哥庄大馒头"
     },
     {
+      "src": "assets/images/provinces/shandong/practice/shandong-practice-5.webp",
+      "caption": "手工馒头制作"
+    },
+    {
       "src": "assets/images/provinces/shandong/practice/shandong-practice-6.webp",
-      "caption": "金牌香酥鸡"
+      "caption": "二月二手工馒头"
     }
   ]
 }

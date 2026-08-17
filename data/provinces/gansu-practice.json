@@ -16,27 +16,27 @@
   "images": [
     {
       "src": "assets/images/provinces/gansu/practice/gansu-practice-1.webp",
-      "caption": "分筛花椒"
-    },
-    {
-      "src": "assets/images/provinces/gansu/practice/gansu-practice-2.webp",
-      "caption": "花椒"
-    },
-    {
-      "src": "assets/images/provinces/gansu/practice/gansu-practice-3.webp",
-      "caption": "花椒晒干后"
-    },
-    {
-      "src": "assets/images/provinces/gansu/practice/gansu-practice-4.webp",
-      "caption": "花椒（1）"
-    },
-    {
-      "src": "assets/images/provinces/gansu/practice/gansu-practice-5.webp",
       "caption": "远观花椒林"
     },
     {
-      "src": "assets/images/provinces/gansu/practice/gansu-practice-6.webp",
+      "src": "assets/images/provinces/gansu/practice/gansu-practice-2.webp",
       "caption": "采集花椒"
+    },
+    {
+      "src": "assets/images/provinces/gansu/practice/gansu-practice-3.webp",
+      "caption": "分筛花椒"
+    },
+    {
+      "src": "assets/images/provinces/gansu/practice/gansu-practice-4.webp",
+      "caption": "花椒晒干后"
+    },
+    {
+      "src": "assets/images/provinces/gansu/practice/gansu-practice-5.webp",
+      "caption": "花椒"
+    },
+    {
+      "src": "assets/images/provinces/gansu/practice/gansu-practice-6.webp",
+      "caption": "花椒（1）"
     }
   ]
 }

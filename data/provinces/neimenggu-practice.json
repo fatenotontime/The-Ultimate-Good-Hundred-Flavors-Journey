@@ -17,31 +17,31 @@
   "images": [
     {
       "src": "assets/images/provinces/neimenggu/practice/neimenggu-practice-1.webp",
-      "caption": "制作技艺"
-    },
-    {
-      "src": "assets/images/provinces/neimenggu/practice/neimenggu-practice-2.webp",
       "caption": "包头老城区"
     },
     {
+      "src": "assets/images/provinces/neimenggu/practice/neimenggu-practice-2.webp",
+      "caption": "制作技艺"
+    },
+    {
       "src": "assets/images/provinces/neimenggu/practice/neimenggu-practice-3.webp",
-      "caption": "烤全羊"
-    },
-    {
-      "src": "assets/images/provinces/neimenggu/practice/neimenggu-practice-4.webp",
-      "caption": "烧麦"
-    },
-    {
-      "src": "assets/images/provinces/neimenggu/practice/neimenggu-practice-5.webp",
       "caption": "烧麦和茶汤出餐"
     },
     {
+      "src": "assets/images/provinces/neimenggu/practice/neimenggu-practice-4.webp",
+      "caption": "茶汤"
+    },
+    {
+      "src": "assets/images/provinces/neimenggu/practice/neimenggu-practice-5.webp",
+      "caption": "烧麦"
+    },
+    {
       "src": "assets/images/provinces/neimenggu/practice/neimenggu-practice-6.webp",
-      "caption": "老城区的美食（放在美食背后的故事的最后）"
+      "caption": "烤全羊"
     },
     {
       "src": "assets/images/provinces/neimenggu/practice/neimenggu-practice-7.webp",
-      "caption": "茶汤"
+      "caption": "老城区的美食（放在美食背后的故事的最后）"
     }
   ]
 }
