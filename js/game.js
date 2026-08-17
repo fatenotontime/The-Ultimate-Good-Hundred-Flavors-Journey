@@ -450,8 +450,9 @@
     const matched = checkRecipe(id);
 
     if (matched) {
-      /* 匹配成功 → 弹出菜品详情 */
+      /* 匹配成功 → 弹出菜品详情，并清空该器具食材 */
       showDishDetail(matched);
+      clearStationItems(id);
     } else {
       /* 不匹配 → 提示并清空该器具食材 */
       showHint(`${cfg.name}里的食材搭不成菜，重新来过～`, 'info');
