@@ -67,6 +67,111 @@
         "面粉",
         "红枣"
       ]
+    },
+    {
+      "id": "shuli-gao",
+      "name": "熟梨糕",
+      "subtitle": "清末民初天津传统小吃",
+      "thumbnail": "assets/images/provinces/tianjin/shuli-gao-thumb.webp",
+      "images": [
+        "assets/images/provinces/tianjin/shuli-gao-full.webp"
+      ],
+      "tags": [
+        "米糕",
+        "传统",
+        "蒸食"
+      ],
+      "origin": "天津 · 五大道",
+      "description": "熟梨糕兴起于清末民初，大米与糯米按比例混合研磨成粉，装入木甑压实，上锅蒸约一分钟成型。取出后垫上薄脆，再涂抹红果、豆沙等果酱。一口咬下，米糕温热软糯，果酱酸甜清爽，是几代天津人的童年记忆。",
+      "ingredients": [
+        "大米",
+        "糯米",
+        "红枣"
+      ]
+    },
+    {
+      "id": "bao-bing",
+      "name": "刨冰",
+      "subtitle": "夏日冰凉甜品",
+      "thumbnail": "assets/images/provinces/tianjin/bao-bing-thumb.webp",
+      "images": [
+        "assets/images/provinces/tianjin/bao-bing-full.webp"
+      ],
+      "tags": [
+        "冰品",
+        "夏日",
+        "甜食"
+      ],
+      "origin": "天津 · 滨江道",
+      "description": "天津刨冰：细碎冰沙配水果红豆，清凉酸甜，是天津人夏日的共同记忆。老式刨冰用铁刨子手摇出冰花，现在用机器，但那份冰凉透心的感觉没变。",
+      "ingredients": [
+        "大米",
+        "红枣",
+        "鸡蛋"
+      ]
+    },
+    {
+      "id": "bazhen-doufu",
+      "name": "八珍豆腐",
+      "subtitle": "外酥里嫩咸鲜浓郁",
+      "thumbnail": "assets/images/provinces/tianjin/bazhen-doufu-thumb.webp",
+      "images": [
+        "assets/images/provinces/tianjin/bazhen-doufu-full.webp"
+      ],
+      "tags": [
+        "豆腐",
+        "鲜香",
+        "家常"
+      ],
+      "origin": "天津 · 五大道",
+      "description": "八珍豆腐：豆腐煎至金黄酥香，与海鲜菌菇烩制，外酥里嫩、咸鲜浓郁。八珍指八种配菜，各家略有不同，但金黄酥脆的豆腐皮是灵魂。",
+      "ingredients": [
+        "鸡蛋",
+        "猪肉",
+        "鱼肉"
+      ]
+    },
+    {
+      "id": "shibajie-mahua",
+      "name": "十八街麻花",
+      "subtitle": "天津三绝之一",
+      "thumbnail": "assets/images/provinces/tianjin/shibajie-mahua-thumb.webp",
+      "images": [
+        "assets/images/provinces/tianjin/shibajie-mahua-full.webp"
+      ],
+      "tags": [
+        "酥脆",
+        "甜食",
+        "伴手礼"
+      ],
+      "origin": "天津 · 滨江道",
+      "description": "十八街麻花：经和面、拉条、夹馅、搓制、炸制等工序，形成\"九转十八扭\"。芝麻桂花冰糖核桃仁层层融入，酥脆香甜，是广受欢迎的城市伴手礼。",
+      "ingredients": [
+        "面粉",
+        "鸡蛋",
+        "猪肉"
+      ]
+    },
+    {
+      "id": "hongshaogu",
+      "name": "红烧牛窝骨",
+      "subtitle": "肉筋软糯入味",
+      "thumbnail": "assets/images/provinces/tianjin/hongshaogu-thumb.webp",
+      "images": [
+        "assets/images/provinces/tianjin/hongshaogu-full.webp"
+      ],
+      "tags": [
+        "炖煮",
+        "浓郁",
+        "暖胃"
+      ],
+      "origin": "天津 · 五大道",
+      "description": "红烧牛窝骨：长时间炖煮至肉筋软糯入味，浓郁酱香尽显北方饮食的热烈实在。牛窝骨部位筋肉相连，胶原蛋白丰富，越炖越香。",
+      "ingredients": [
+        "猪肉",
+        "葱",
+        "面粉"
+      ]
     }
   ]
 }

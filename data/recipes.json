@@ -1,102 +1,269 @@
 {
   "recipes": [
     {
-      "id": "diguoji", "name": "地锅鸡配锅贴", "subtitle": "一锅两吃，饼借菜味",
-      "utensil": "wok", "utensilName": "铁锅",
-      "ingredients": ["鸡肉", "面粉", "葱"],
+      "id": "diguoji",
+      "name": "地锅鸡配锅贴",
+      "subtitle": "一锅两吃，饼借菜味",
+      "utensil": "wok",
+      "utensilName": "铁锅",
+      "ingredients": [
+        "鸡肉",
+        "面粉",
+        "葱"
+      ],
       "thumbnail": "assets/images/provinces/anhui/diguoji-thumb.webp",
       "link": "detail.html?province=anhui&dish=diguoji"
     },
     {
-      "id": "jianjiao-baodan", "name": "煎饺抱蛋", "subtitle": "金黄蛋衣，酥脆煎饺",
-      "utensil": "steamer", "utensilName": "蒸屉",
-      "ingredients": ["面粉", "猪肉", "鸡蛋"],
+      "id": "jianjiao-baodan",
+      "name": "煎饺抱蛋",
+      "subtitle": "金黄蛋衣，酥脆煎饺",
+      "utensil": "steamer",
+      "utensilName": "蒸屉",
+      "ingredients": [
+        "面粉",
+        "猪肉",
+        "鸡蛋"
+      ],
       "thumbnail": "assets/images/provinces/anhui/jianjiao-baodan-thumb.webp",
       "link": "detail.html?province=anhui&dish=jianjiao-baodan"
     },
     {
-      "id": "danhuatang", "name": "蛋花汤", "subtitle": "一撮葱花，一勺清汤",
-      "utensil": "claypot", "utensilName": "砂锅",
-      "ingredients": ["鸡蛋", "葱"],
+      "id": "danhuatang",
+      "name": "蛋花汤",
+      "subtitle": "一撮葱花，一勺清汤",
+      "utensil": "claypot",
+      "utensilName": "砂锅",
+      "ingredients": [
+        "鸡蛋",
+        "葱"
+      ],
       "thumbnail": "assets/images/provinces/anhui/danhuatang-thumb.webp",
       "link": "detail.html?province=anhui&dish=danhuatang"
     },
     {
-      "id": "jianbing-guozi", "name": "煎饼果子", "subtitle": "津门晨光第一味",
-      "utensil": "wok", "utensilName": "铁锅",
-      "ingredients": ["面粉", "鸡蛋", "猪肉"],
+      "id": "jianbing-guozi",
+      "name": "煎饼果子",
+      "subtitle": "津门晨光第一味",
+      "utensil": "wok",
+      "utensilName": "铁锅",
+      "ingredients": [
+        "面粉",
+        "鸡蛋",
+        "猪肉"
+      ],
       "thumbnail": "assets/images/provinces/tianjin/jianbing-thumb.webp",
       "link": "detail.html?province=tianjin&dish=jianbing-guozi"
     },
     {
-      "id": "goubulibaozi", "name": "狗不理包子", "subtitle": "十八个褶的百年信誉",
-      "utensil": "steamer", "utensilName": "蒸屉",
-      "ingredients": ["面粉", "猪肉", "鸡蛋"],
+      "id": "goubulibaozi",
+      "name": "狗不理包子",
+      "subtitle": "十八个褶的百年信誉",
+      "utensil": "steamer",
+      "utensilName": "蒸屉",
+      "ingredients": [
+        "面粉",
+        "猪肉",
+        "鸡蛋"
+      ],
       "thumbnail": "assets/images/provinces/tianjin/goubuli-thumb.webp",
       "link": "detail.html?province=tianjin&dish=goubulibaozi"
     },
     {
-      "id": "erduoyan-zhagao", "name": "耳朵眼炸糕", "subtitle": "胡同口的百年酥脆",
-      "utensil": "claypot", "utensilName": "砂锅",
-      "ingredients": ["糯米", "面粉", "红枣"],
+      "id": "erduoyan-zhagao",
+      "name": "耳朵眼炸糕",
+      "subtitle": "胡同口的百年酥脆",
+      "utensil": "claypot",
+      "utensilName": "砂锅",
+      "ingredients": [
+        "糯米",
+        "面粉",
+        "红枣"
+      ],
       "thumbnail": "assets/images/provinces/tianjin/erduoyan-thumb.webp",
       "link": "detail.html?province=tianjin&dish=erduoyan-zhagao"
     },
     {
-      "id": "shaomai", "name": "烧麦", "subtitle": "一笼捎卖里的走西口往事",
-      "utensil": "steamer", "utensilName": "蒸屉",
-      "ingredients": ["面粉", "绵羊肉", "葱"],
+      "id": "shaomai",
+      "name": "烧麦",
+      "subtitle": "一笼捎卖里的走西口往事",
+      "utensil": "steamer",
+      "utensilName": "蒸屉",
+      "ingredients": [
+        "面粉",
+        "绵羊肉",
+        "葱"
+      ],
       "thumbnail": "assets/images/provinces/neimenggu/shaomai-thumb.webp",
       "link": "detail.html?province=neimenggu&dish=shaomai"
     },
     {
-      "id": "chatang", "name": "茶汤", "subtitle": "龙嘴铜壶冲出的塞外甜润",
-      "utensil": "claypot", "utensilName": "砂锅",
-      "ingredients": ["糯米", "红枣", "面粉"],
+      "id": "chatang",
+      "name": "茶汤",
+      "subtitle": "龙嘴铜壶冲出的塞外甜润",
+      "utensil": "claypot",
+      "utensilName": "砂锅",
+      "ingredients": [
+        "糯米",
+        "红枣",
+        "面粉"
+      ],
       "thumbnail": "assets/images/provinces/neimenggu/chatang-thumb.webp",
       "link": "detail.html?province=neimenggu&dish=chatang"
     },
     {
-      "id": "gaotuan", "name": "阿芳糕团", "subtitle": "西山非遗糕点九十年传承",
-      "utensil": "steamer", "utensilName": "蒸屉",
-      "ingredients": ["糯米", "面粉", "红枣"],
+      "id": "gaotuan",
+      "name": "阿芳糕团",
+      "subtitle": "西山非遗糕点九十年传承",
+      "utensil": "steamer",
+      "utensilName": "蒸屉",
+      "ingredients": [
+        "糯米",
+        "面粉",
+        "红枣"
+      ],
       "thumbnail": "assets/images/provinces/jiangsu/gaotuan-thumb.webp",
       "link": "detail.html?province=jiangsu&dish=gaotuan"
     },
     {
-      "id": "youdunzi", "name": "馋佬沛油墩子", "subtitle": "江南老牌街头小吃",
-      "utensil": "wok", "utensilName": "铁锅",
-      "ingredients": ["面粉", "鸡蛋", "猪肉"],
+      "id": "youdunzi",
+      "name": "馋佬沛油墩子",
+      "subtitle": "江南老牌街头小吃",
+      "utensil": "wok",
+      "utensilName": "铁锅",
+      "ingredients": [
+        "面粉",
+        "鸡蛋",
+        "猪肉"
+      ],
       "thumbnail": "assets/images/provinces/jiangsu/youdunzi-thumb.webp",
       "link": "detail.html?province=jiangsu&dish=youdunzi"
     },
     {
-      "id": "xiekehuang", "name": "蟹壳黄", "subtitle": "苏州街头的酥脆烧饼",
-      "utensil": "wok", "utensilName": "铁锅",
-      "ingredients": ["面粉", "鱼肉", "鸡蛋"],
+      "id": "xiekehuang",
+      "name": "蟹壳黄",
+      "subtitle": "苏州街头的酥脆烧饼",
+      "utensil": "wok",
+      "utensilName": "铁锅",
+      "ingredients": [
+        "面粉",
+        "鱼肉",
+        "鸡蛋"
+      ],
       "thumbnail": "assets/images/provinces/jiangsu/xiekehuang-thumb.webp",
       "link": "detail.html?province=jiangsu&dish=xiekehuang"
     },
     {
-      "id": "xiangsu-ji", "name": "金牌香酥鸡", "subtitle": "山东省级非遗菜品",
-      "utensil": "wok", "utensilName": "铁锅",
-      "ingredients": ["鸡肉", "面粉", "鸡蛋"],
+      "id": "xiangsu-ji",
+      "name": "金牌香酥鸡",
+      "subtitle": "山东省级非遗菜品",
+      "utensil": "wok",
+      "utensilName": "铁锅",
+      "ingredients": [
+        "鸡肉",
+        "面粉",
+        "鸡蛋"
+      ],
       "thumbnail": "assets/images/provinces/shandong/xiangsu-ji-thumb.webp",
       "link": "detail.html?province=shandong&dish=xiangsu-ji"
     },
     {
-      "id": "mantou", "name": "王哥庄大馒头", "subtitle": "五百年的非遗古法",
-      "utensil": "steamer", "utensilName": "蒸屉",
-      "ingredients": ["面粉", "鸡蛋", "糯米"],
+      "id": "mantou",
+      "name": "王哥庄大馒头",
+      "subtitle": "五百年的非遗古法",
+      "utensil": "steamer",
+      "utensilName": "蒸屉",
+      "ingredients": [
+        "面粉",
+        "鸡蛋",
+        "糯米"
+      ],
       "thumbnail": "assets/images/provinces/shandong/mantou-thumb.webp",
       "link": "detail.html?province=shandong&dish=mantou"
     },
     {
-      "id": "er-yue-er-zhou", "name": "二月二杂粮粥", "subtitle": "农家灶台的朴实温暖",
-      "utensil": "claypot", "utensilName": "砂锅",
-      "ingredients": ["糯米", "红枣", "大米"],
+      "id": "er-yue-er-zhou",
+      "name": "二月二杂粮粥",
+      "subtitle": "农家灶台的朴实温暖",
+      "utensil": "claypot",
+      "utensilName": "砂锅",
+      "ingredients": [
+        "糯米",
+        "红枣",
+        "大米"
+      ],
       "thumbnail": "assets/images/provinces/shandong/er-yue-er-zhou-thumb.webp",
       "link": "detail.html?province=shandong&dish=er-yue-er-zhou"
+    },
+    {
+      "id": "shuli-gao",
+      "name": "熟梨糕",
+      "subtitle": "清末民初天津传统小吃",
+      "utensil": "claypot",
+      "utensilName": "砂锅",
+      "ingredients": [
+        "大米",
+        "糯米",
+        "红枣"
+      ],
+      "thumbnail": "assets/images/provinces/tianjin/shuli-gao-thumb.webp",
+      "link": "detail.html?province=tianjin&dish=shuli-gao"
+    },
+    {
+      "id": "bao-bing",
+      "name": "刨冰",
+      "subtitle": "夏日冰凉甜品",
+      "utensil": "claypot",
+      "utensilName": "砂锅",
+      "ingredients": [
+        "大米",
+        "红枣",
+        "鸡蛋"
+      ],
+      "thumbnail": "assets/images/provinces/tianjin/bao-bing-thumb.webp",
+      "link": "detail.html?province=tianjin&dish=bao-bing"
+    },
+    {
+      "id": "bazhen-doufu",
+      "name": "八珍豆腐",
+      "subtitle": "外酥里嫩咸鲜浓郁",
+      "utensil": "wok",
+      "utensilName": "铁锅",
+      "ingredients": [
+        "鸡蛋",
+        "猪肉",
+        "鱼肉"
+      ],
+      "thumbnail": "assets/images/provinces/tianjin/bazhen-doufu-thumb.webp",
+      "link": "detail.html?province=tianjin&dish=bazhen-doufu"
+    },
+    {
+      "id": "shibajie-mahua",
+      "name": "十八街麻花",
+      "subtitle": "天津三绝之一",
+      "utensil": "wok",
+      "utensilName": "铁锅",
+      "ingredients": [
+        "面粉",
+        "鸡蛋",
+        "猪肉"
+      ],
+      "thumbnail": "assets/images/provinces/tianjin/shibajie-mahua-thumb.webp",
+      "link": "detail.html?province=tianjin&dish=shibajie-mahua"
+    },
+    {
+      "id": "hongshaogu",
+      "name": "红烧牛窝骨",
+      "subtitle": "肉筋软糯入味",
+      "utensil": "wok",
+      "utensilName": "铁锅",
+      "ingredients": [
+        "猪肉",
+        "葱",
+        "面粉"
+      ],
+      "thumbnail": "assets/images/provinces/tianjin/hongshaogu-thumb.webp",
+      "link": "detail.html?province=tianjin&dish=hongshaogu"
     }
   ]
 }
