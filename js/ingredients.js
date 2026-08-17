@@ -36,6 +36,7 @@
     { name: '大米',   icon: 'rice' },
     { name: '葱',     icon: 'scallion' },
     { name: '红枣',   icon: 'red-date' },
+    { name: '鱼肉',   icon: 'fish' },
   ];
 
   /* 图标文件的基础路径 */

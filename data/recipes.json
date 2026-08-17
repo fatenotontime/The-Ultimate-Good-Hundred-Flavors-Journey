@@ -73,7 +73,7 @@
     {
       "id": "xiekehuang", "name": "蟹壳黄", "subtitle": "苏州街头的酥脆烧饼",
       "utensil": "wok", "utensilName": "铁锅",
-      "ingredients": ["面粉", "猪肉", "鸡蛋"],
+      "ingredients": ["面粉", "鱼肉", "鸡蛋"],
       "thumbnail": "assets/images/provinces/jiangsu/xiekehuang-thumb.webp",
       "link": "detail.html?province=jiangsu&dish=xiekehuang"
     },
