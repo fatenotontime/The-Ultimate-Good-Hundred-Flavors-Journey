@@ -24,7 +24,7 @@
        蔬菜：葱
        果干：红枣
      每项 = { name: 食材名, icon: 图标文件名（PNG，无扩展名） }
-     图标来自 assets/images/ingredients/（手绘线稿，120x120 透明）
+     图标来自 assets/images/ingredients/（轻量 WebP，最长边 240px）
      ========================================================== */
   const INGREDIENTS = [
     { name: '鸡肉',   icon: 'chicken' },
@@ -38,6 +38,7 @@
     { name: '葱',     icon: 'scallion' },
     { name: '红枣',   icon: 'red-date' },
     { name: '鱼肉',   icon: 'fish' },
+    { name: '豆腐',   icon: 'tofu' },
   ];
 
   /* 图标文件的基础路径 */
@@ -78,7 +79,7 @@
     listEl.innerHTML = items.map(it => `
       <li class="ingredients-panel__item" data-name="${esc(it.name)}">
         <img class="ingredients-panel__item-icon"
-             src="${ICON_DIR}${it.icon}.png"
+             src="${ICON_DIR}${it.icon}.webp"
              alt="" aria-hidden="true"
              width="30" height="30">
         <span class="ingredients-panel__item-name">${esc(it.name)}</span>

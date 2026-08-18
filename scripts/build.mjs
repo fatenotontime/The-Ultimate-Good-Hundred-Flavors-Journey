@@ -34,6 +34,18 @@ for (const directory of directories) {
   });
 }
 
+async function removeSourcePngs(relativeDirectory) {
+  const directory = join(outputDirectory, relativeDirectory);
+  for (const entry of await readdir(directory, { withFileTypes: true })) {
+    if (entry.isFile() && entry.name.toLowerCase().endsWith(".png")) {
+      await rm(join(directory, entry.name));
+    }
+  }
+}
+
+await removeSourcePngs(join("assets", "images", "ingredients"));
+await removeSourcePngs(join("assets", "images", "kitchen"));
+
 async function summarize(directory) {
   let fileCount = 0;
   let totalBytes = 0;

@@ -434,7 +434,7 @@
   -webkit-user-drag: none;           /* 禁止整行原生拖拽 */
 }
 
-/* 食材 PNG 图标（120x120 透明抠图） */
+/* 食材 WebP 图标（最长边 240px，透明抠图） */
 .ingredients-panel__item-icon {
   flex-shrink: 0;
   width: 30px;                       /* 固定宽度，保证文字对齐 */
@@ -589,14 +589,47 @@
   backdrop-filter: blur(4px);
 }
 
-.dish-detail-card {
+.dish-detail-dialog {
   position: relative;
   width: 340px;
   max-width: 90vw;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.dish-detail-dialog.is-multiple {
+  width: min(760px, 92vw);
+  padding: 54px 20px 20px;
+  background: var(--gaosu);
+  border-radius: 16px;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.45);
+}
+
+.dish-detail-dialog__title {
+  font-family: var(--font-title);
+  font-size: 22px;
+  color: var(--yanzhi);
+  letter-spacing: 3px;
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.dish-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+.dish-detail-card {
+  position: relative;
   background: var(--gaosu);
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 24px 64px rgba(0, 0, 0, 0.45);
+}
+
+.dish-detail-dialog.is-multiple .dish-detail-card {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
 }
 
 .dish-detail-card__close {
@@ -676,6 +709,15 @@
   transform: translateY(-2px);
   box-shadow: 0 6px 16px rgba(120, 146, 98, 0.4);
   color: #fff;
+}
+
+@media (max-width: 600px) {
+  .dish-detail-dialog.is-multiple {
+    padding: 52px 12px 14px;
+  }
+  .dish-detail-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ============================================================

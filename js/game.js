@@ -184,7 +184,7 @@
       if (name) {
         html += `
           <span class="station__tray-slot is-filled" title="${esc(name)} ×${count}">
-            <img src="assets/images/ingredients/${INGREDIENT_ICONS[name] || 'chicken'}.png"
+            <img src="assets/images/ingredients/${INGREDIENT_ICONS[name] || 'chicken'}.webp"
                  alt="${esc(name)}" width="20" height="20">
             <i>×${count}</i>
           </span>`;
@@ -447,14 +447,14 @@
     }
 
     /* ---- 配方判定 ---- */
-    const matched = checkRecipe(id);
+    const matches = checkRecipes(id);
 
-    if (matched) {
+    if (matches.length > 0) {
       /* 匹配成功 → 弹出菜品详情，清空该器具食材
          注意：clearStationItems 在弹窗动画之前执行，
          确保槽位立即清空（不等弹窗动画完成） */
       clearStationItems(id);
-      showDishDetail(matched);
+      showDishDetails(matches);
     } else {
       /* 不匹配 → 提示并清空该器具食材 */
       clearStationItems(id);
@@ -463,52 +463,66 @@
   }
 
   /* ==========================================================
-     配方判定（checkRecipe）
+     配方判定（checkRecipes）
      ----------------------------------------------------------
-     遍历配方表，找器具匹配且食材种类符合的配方。
-     判定：配方食材的每一种都已在器具内（数量≥1）即匹配。
-     返回匹配的配方对象；无匹配返回 null。
+     判定：器具相同，且实际食材名称集合与配方食材集合完全相等。
+     数量不影响集合；如果多个配方组合完全相同，则全部返回。
      ========================================================== */
-  function checkRecipe(stationId) {
+  function checkRecipes(stationId) {
     const items = stationItems[stationId] || {};
-    const hasAll = recipe => recipe.ingredients.every(ing => items[ing] >= 1);
-    return recipes.find(r => r.utensil === stationId && hasAll(r)) || null;
+    return window.RecipeMatcher.findMatches(recipes, stationId, items);
   }
 
   /* ==========================================================
-     弹出菜品详情（showDishDetail）
+     弹出菜品详情（showDishDetails）
      ----------------------------------------------------------
      匹配成功时：在页面中央弹出菜品卡片，
      含缩略图、菜名、副标题、配方食材标签，
      点击"查看详情"跳转 detail.html。
      ========================================================== */
-  function showDishDetail(recipe) {
+  function showDishDetails(matches) {
     /* 若已有弹窗则先关闭 */
     const old = qs('.dish-detail-overlay');
     if (old) old.remove();
 
     const overlay = document.createElement('div');
     overlay.className = 'dish-detail-overlay';
+    const multiple = matches.length > 1;
     overlay.innerHTML = `
-      <div class="dish-detail-card">
+      <div class="dish-detail-dialog${multiple ? ' is-multiple' : ''}"
+           role="dialog" aria-modal="true" aria-label="烹饪结果">
         <button class="dish-detail-card__close" type="button" aria-label="关闭">×</button>
-        <div class="dish-detail-card__img">
-          <img src="${esc(recipe.thumbnail)}" alt="${esc(recipe.name)}">
-        </div>
-        <div class="dish-detail-card__body">
-          <h3 class="dish-detail-card__name">${esc(recipe.name)}</h3>
-          <p class="dish-detail-card__subtitle">${esc(recipe.subtitle || '')}</p>
-          <div class="dish-detail-card__tags">
-            ${(recipe.ingredients || []).map(i =>
-              `<span class="dish-detail-card__tag">${esc(i)}</span>`).join('')}
-          </div>
-          <a class="dish-detail-card__link" href="${esc(recipe.link)}">查看详情 →</a>
+        ${multiple ? `<h2 class="dish-detail-dialog__title">这组食材解锁了 ${matches.length} 道菜</h2>` : ''}
+        <div class="dish-detail-grid">
+          ${matches.map(recipe => `
+            <article class="dish-detail-card">
+              <div class="dish-detail-card__img">
+                <img src="${esc(recipe.thumbnail)}" alt="${esc(recipe.name)}">
+              </div>
+              <div class="dish-detail-card__body">
+                <h3 class="dish-detail-card__name">${esc(recipe.name)}</h3>
+                <p class="dish-detail-card__subtitle">${esc(recipe.subtitle || '')}</p>
+                <div class="dish-detail-card__tags">
+                  ${(recipe.ingredients || []).map(i =>
+                    `<span class="dish-detail-card__tag">${esc(i)}</span>`).join('')}
+                </div>
+                <a class="dish-detail-card__link" href="${esc(recipe.link)}">查看详情 →</a>
+              </div>
+            </article>
+          `).join('')}
         </div>
       </div>
     `;
     document.body.appendChild(overlay);
 
+    let closing = false;
+    const onKeyDown = event => {
+      if (event.key === 'Escape') close();
+    };
     const close = () => {
+      if (closing) return;
+      closing = true;
+      document.removeEventListener('keydown', onKeyDown);
       gsap.to(overlay, {
         opacity: 0, duration: 0.25, ease: 'power1.in',
         onComplete: () => overlay.remove()
@@ -516,15 +530,19 @@
     };
     overlay.querySelector('.dish-detail-card__close').addEventListener('click', close);
     overlay.addEventListener('click', e => { if (e.target === overlay) close(); });
+    document.addEventListener('keydown', onKeyDown);
 
     /* 弹出动画 */
     gsap.fromTo(overlay,
       { opacity: 0 },
       { opacity: 1, duration: 0.25, ease: 'power1.out' }
     );
-    gsap.fromTo('.dish-detail-card',
+    gsap.fromTo(qsa('.dish-detail-card', overlay),
       { scale: 0.8, y: 30, opacity: 0 },
-      { scale: 1, y: 0, opacity: 1, duration: 0.5, ease: 'back.out(1.5)' }
+      {
+        scale: 1, y: 0, opacity: 1, duration: 0.5,
+        stagger: 0.08, ease: 'back.out(1.5)'
+      }
     );
   }
 
@@ -560,7 +578,7 @@
               <div class="recipe-book__ings">
                 ${r.ingredients.map(ing => `
                   <span class="recipe-book__ing">
-                    <img src="assets/images/ingredients/${icons[ing] || 'chicken'}.png"
+                    <img src="assets/images/ingredients/${icons[ing] || 'chicken'}.webp"
                          alt="${esc(ing)}" width="26" height="26">
                     ${esc(ing)}
                   </span>`).join('')}

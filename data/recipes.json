@@ -18,8 +18,8 @@
       "id": "jianjiao-baodan",
       "name": "煎饺抱蛋",
       "subtitle": "金黄蛋衣，酥脆煎饺",
-      "utensil": "steamer",
-      "utensilName": "蒸屉",
+      "utensil": "wok",
+      "utensilName": "铁锅",
       "ingredients": [
         "面粉",
         "猪肉",
@@ -50,7 +50,7 @@
       "ingredients": [
         "面粉",
         "鸡蛋",
-        "猪肉"
+        "葱"
       ],
       "thumbnail": "assets/images/provinces/tianjin/jianbing-thumb.webp",
       "link": "detail.html?province=tianjin&dish=jianbing-guozi"
@@ -72,8 +72,8 @@
       "id": "erduoyan-zhagao",
       "name": "耳朵眼炸糕",
       "subtitle": "胡同口的百年酥脆",
-      "utensil": "claypot",
-      "utensilName": "砂锅",
+      "utensil": "wok",
+      "utensilName": "铁锅",
       "ingredients": [
         "糯米",
         "面粉",
@@ -174,32 +174,17 @@
       "utensilName": "蒸屉",
       "ingredients": [
         "面粉",
-        "鸡蛋",
-        "糯米"
+        "鸡蛋"
       ],
       "thumbnail": "assets/images/provinces/shandong/mantou-thumb.webp",
       "link": "detail.html?province=shandong&dish=mantou"
     },
     {
-      "id": "er-yue-er-zhou",
-      "name": "二月二杂粮粥",
-      "subtitle": "农家灶台的朴实温暖",
-      "utensil": "claypot",
-      "utensilName": "砂锅",
-      "ingredients": [
-        "糯米",
-        "红枣",
-        "大米"
-      ],
-      "thumbnail": "assets/images/provinces/shandong/er-yue-er-zhou-thumb.webp",
-      "link": "detail.html?province=shandong&dish=er-yue-er-zhou"
-    },
-    {
       "id": "shuli-gao",
       "name": "熟梨糕",
       "subtitle": "清末民初天津传统小吃",
-      "utensil": "claypot",
-      "utensilName": "砂锅",
+      "utensil": "steamer",
+      "utensilName": "蒸屉",
       "ingredients": [
         "大米",
         "糯米",
@@ -215,6 +200,7 @@
       "utensil": "wok",
       "utensilName": "铁锅",
       "ingredients": [
+        "豆腐",
         "鸡蛋",
         "猪肉",
         "鱼肉"
@@ -238,8 +224,8 @@
       "id": "hongshaogu",
       "name": "红烧牛窝骨",
       "subtitle": "肉筋软糯入味",
-      "utensil": "wok",
-      "utensilName": "铁锅",
+      "utensil": "claypot",
+      "utensilName": "砂锅",
       "ingredients": [
         "牛肉",
         "面粉"

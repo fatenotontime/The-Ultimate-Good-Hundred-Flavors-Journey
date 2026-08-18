@@ -43,29 +43,7 @@
       "description": "五百余年历史，曾为古代贡品。老面发酵、手工揉制、柴火铁锅蒸制，焦香锅巴是最大特色。",
       "ingredients": [
         "面粉",
-        "鸡蛋",
-        "糯米"
-      ]
-    },
-    {
-      "id": "yuer-sanbai",
-      "name": "二月二杂粮粥",
-      "subtitle": "农家灶台的朴实温暖",
-      "thumbnail": "assets/images/provinces/shandong/yuer-sanbai-thumb.webp",
-      "images": [
-        "assets/images/provinces/shandong/yuer-sanbai-full.webp"
-      ],
-      "tags": [
-        "清淡",
-        "时令",
-        "农家"
-      ],
-      "origin": "山东 · 青岛",
-      "description": "二月二农场的时令杂粮粥，用崂山泉水与本地谷物慢火熬制，朴实温暖，尽显胶东农家本味。",
-      "ingredients": [
-        "糯米",
-        "红枣",
-        "葱"
+        "鸡蛋"
       ]
     }
   ]

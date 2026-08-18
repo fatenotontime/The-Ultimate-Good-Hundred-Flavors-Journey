@@ -29,8 +29,8 @@ npm run build
 成功时会显示类似：
 
 ```text
-Built dist: 177 files, 33.58 MB ...
-Verified dist: 177 files, 33.58 MB, 3 WOFF2 fonts, 14 JSON files.
+Built dist: 172 files, 8.63 MB ...
+Verified dist: 172 files, 8.63 MB, 3 WOFF2 fonts, 14 JSON files.
 ```
 
 每次修改网站内容后都可以重新运行。脚本会安全地删除旧 `dist/`，再完整生成新目录。
@@ -87,7 +87,7 @@ Verified dist: 177 files, 33.58 MB, 3 WOFF2 fonts, 14 JSON files.
 - `/` 或 `/index.html`
 - `/province.html?id=anhui`
 - `/detail.html?province=anhui&dish=diguoji`
-- `/practice.html?id=anhui`
+- `/practice.html?province=anhui`
 - `/game.html`
 - `/about.html`
 
@@ -127,7 +127,7 @@ Netlify 会保留历史发布。在站点的 **Deploys** 页面选择最近一�
 
 ### 为什么还要 dist？
 
-它隔离了“开发资料”和“真正上线的文件”。Netlify 最终只收到约 33.58 MB 的网站运行文件，不会发布 Word 文档、设计记录、本地批处理、日志和以后可能加入的处理脚本。
+它隔离了“开发资料”和“真正上线的文件”。Netlify 最终只收到约 8.63 MB 的网站运行文件，不会发布 Word 文档、设计记录、本地批处理、日志、食材/器具原始 PNG 和以后可能加入的处理脚本。
 
 ### 拖拽部署和 GitHub 自动部署选哪个？
 

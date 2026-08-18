@@ -7,7 +7,8 @@
     "node": ">=20"
   },
   "scripts": {
-    "build": "node scripts/build.mjs && node scripts/verify-dist.mjs",
+    "build": "npm run test:recipes && node scripts/build.mjs && node scripts/verify-dist.mjs",
+    "test:recipes": "node scripts/test-recipe-matcher.mjs",
     "verify:dist": "node scripts/verify-dist.mjs"
   }
 }
